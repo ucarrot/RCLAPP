@@ -48,6 +48,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hw4-D2-XFP" id="vzz-Wt-R4T"/>
+                                    <outlet property="delegate" destination="Hw4-D2-XFP" id="guM-xQ-SmO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,11 +72,81 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="D1J-Rp-kES" id="sWs-wQ-Oau"/>
+                        <segue destination="7g1-n1-mHq" kind="show" id="RzB-EB-FuY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlz-EV-55l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1153.6231884057972" y="-305.70652173913044"/>
+        </scene>
+        <!--Shopping Items-->
+        <scene sceneID="qYj-fm-gFx">
+            <objects>
+                <viewController id="7g1-n1-mHq" customClass="ShoppingItemViewController" customModule="RCLAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jFo-Kc-vQd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h6J-cq-6dn">
+                                <rect key="frame" x="0.0" y="103" width="414" height="633"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNi-AL-gpg">
+                                <rect key="frame" x="0.0" y="64" width="414" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Items Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OZ-DX-zoe">
+                                        <rect key="frame" x="8" y="10" width="140" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14y-6Y-VWn">
+                                        <rect key="frame" x="263" y="9" width="140" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="FZ3-CP-4px"/>
+                                    <constraint firstAttribute="height" constant="40" id="K4V-mi-ydo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JNi-AL-gpg" firstAttribute="top" secondItem="p7N-NA-4RO" secondAttribute="top" id="4ok-Tz-gon"/>
+                            <constraint firstItem="h6J-cq-6dn" firstAttribute="leading" secondItem="JNi-AL-gpg" secondAttribute="leading" id="9b8-4b-8Cg"/>
+                            <constraint firstItem="h6J-cq-6dn" firstAttribute="leading" secondItem="p7N-NA-4RO" secondAttribute="leading" id="Eyh-KB-xX9"/>
+                            <constraint firstAttribute="bottom" secondItem="h6J-cq-6dn" secondAttribute="bottom" id="Ilp-Hu-4ac"/>
+                            <constraint firstItem="h6J-cq-6dn" firstAttribute="trailing" secondItem="JNi-AL-gpg" secondAttribute="trailing" id="jI3-aJ-9xJ"/>
+                            <constraint firstItem="JNi-AL-gpg" firstAttribute="leading" secondItem="p7N-NA-4RO" secondAttribute="leading" id="k9l-xc-XEx"/>
+                            <constraint firstItem="JNi-AL-gpg" firstAttribute="trailing" secondItem="p7N-NA-4RO" secondAttribute="trailing" id="krl-Xp-oGt"/>
+                            <constraint firstItem="h6J-cq-6dn" firstAttribute="trailing" secondItem="p7N-NA-4RO" secondAttribute="trailing" id="mBI-ig-gfT"/>
+                            <constraint firstItem="h6J-cq-6dn" firstAttribute="top" secondItem="JNi-AL-gpg" secondAttribute="bottom" constant="-1" id="nxP-uL-fn7"/>
+                            <constraint firstAttribute="bottom" secondItem="h6J-cq-6dn" secondAttribute="bottom" id="oCn-lB-gLL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p7N-NA-4RO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopping Items" id="vdG-2W-9UA">
+                        <barButtonItem key="rightBarButtonItem" image="Plus" id="ljN-Jv-X7J">
+                            <connections>
+                                <action selector="addBarButtonItemPressed:" destination="7g1-n1-mHq" id="xRM-fA-JH3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="itemsLeftLabel" destination="3OZ-DX-zoe" id="LbU-9c-veV"/>
+                        <outlet property="tableView" destination="h6J-cq-6dn" id="oKr-KJ-U46"/>
+                        <outlet property="totalPriceLabel" destination="14y-6Y-VWn" id="qra-NU-rqG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ea7-pQ-zu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900.0000000000002" y="-298.36956521739131"/>
         </scene>
         <!--My List-->
         <scene sceneID="OHJ-ZV-CGT">

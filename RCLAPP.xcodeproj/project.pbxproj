@@ -13,6 +13,10 @@
 		15C580FB2125D88A0039AA36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15C580FA2125D88A0039AA36 /* GoogleService-Info.plist */; };
 		15C580FD2125E4F20039AA36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C580FC2125E4F20039AA36 /* Assets.xcassets */; };
 		15C580FF2125F9C00039AA36 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C580FE2125F9C00039AA36 /* AllListsViewController.swift */; };
+		15C5810121270D390039AA36 /* ShoppingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5810021270D390039AA36 /* ShoppingItemViewController.swift */; };
+		15C58103212712BA0039AA36 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C58102212712BA0039AA36 /* ShoppingList.swift */; };
+		15C581052127154D0039AA36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C581042127154D0039AA36 /* Constants.swift */; };
+		15C58107212718820039AA36 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C58106212718820039AA36 /* Utilities.swift */; };
 		DF685E0BF69066DB1DFB045B /* Pods_RCLAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		15C580FA2125D88A0039AA36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15C580FC2125E4F20039AA36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15C580FE2125F9C00039AA36 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
+		15C5810021270D390039AA36 /* ShoppingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemViewController.swift; sourceTree = "<group>"; };
+		15C58102212712BA0039AA36 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		15C581042127154D0039AA36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		15C58106212718820039AA36 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		564423FF07EF58A3087044FA /* Pods-RCLAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		68F97D7A6C9DB7256F849B77 /* Pods-RCLAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.release.xcconfig"; sourceTree = "<group>"; };
 		909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCLAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +73,10 @@
 			children = (
 				15C580E8212479940039AA36 /* AppDelegate.swift */,
 				15C580FE2125F9C00039AA36 /* AllListsViewController.swift */,
+				15C5810021270D390039AA36 /* ShoppingItemViewController.swift */,
+				15C58102212712BA0039AA36 /* ShoppingList.swift */,
+				15C581042127154D0039AA36 /* Constants.swift */,
+				15C58106212718820039AA36 /* Utilities.swift */,
 				15C580EC212479940039AA36 /* Main.storyboard */,
 				15C580FC2125E4F20039AA36 /* Assets.xcassets */,
 				15C580F1212479960039AA36 /* LaunchScreen.storyboard */,
@@ -216,6 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C58107212718820039AA36 /* Utilities.swift in Sources */,
+				15C581052127154D0039AA36 /* Constants.swift in Sources */,
+				15C5810121270D390039AA36 /* ShoppingItemViewController.swift in Sources */,
+				15C58103212712BA0039AA36 /* ShoppingList.swift in Sources */,
 				15C580FF2125F9C00039AA36 /* AllListsViewController.swift in Sources */,
 				15C580E9212479940039AA36 /* AppDelegate.swift in Sources */,
 			);
