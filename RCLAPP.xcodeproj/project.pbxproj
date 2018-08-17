@@ -74,9 +74,8 @@
 				15C580E8212479940039AA36 /* AppDelegate.swift */,
 				15C580FE2125F9C00039AA36 /* AllListsViewController.swift */,
 				15C5810021270D390039AA36 /* ShoppingItemViewController.swift */,
-				15C58102212712BA0039AA36 /* ShoppingList.swift */,
-				15C581042127154D0039AA36 /* Constants.swift */,
-				15C58106212718820039AA36 /* Utilities.swift */,
+				15C581082127364E0039AA36 /* Model */,
+				15C581092127365A0039AA36 /* Helpers */,
 				15C580EC212479940039AA36 /* Main.storyboard */,
 				15C580FC2125E4F20039AA36 /* Assets.xcassets */,
 				15C580F1212479960039AA36 /* LaunchScreen.storyboard */,
@@ -84,6 +83,23 @@
 				15C580FA2125D88A0039AA36 /* GoogleService-Info.plist */,
 			);
 			path = RCLAPP;
+			sourceTree = "<group>";
+		};
+		15C581082127364E0039AA36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15C58102212712BA0039AA36 /* ShoppingList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		15C581092127365A0039AA36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				15C581042127154D0039AA36 /* Constants.swift */,
+				15C58106212718820039AA36 /* Utilities.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4303D66EF8F4EC03783D6FEA /* Frameworks */ = {
