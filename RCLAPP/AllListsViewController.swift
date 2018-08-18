@@ -20,18 +20,25 @@ class AllListsViewController: UIViewController,UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        loadLists()
 
     }
 
     //MARK: TableView DataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return allLists.count
     }
-    
+    //display data in cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ListTableViewCell
+        let shoppingList = allLists[indexPath.row]
+        
+        cell.binData(item: shoppingList)
+        
+        
+        return cell
     }
     //MARK: IBActions
     
@@ -64,6 +71,31 @@ class AllListsViewController: UIViewController,UITableViewDataSource,UITableView
         //present it
         self.present(alertController, animated: true, completion: nil)
     }
+    //MARK: LoadList
+    
+    func loadLists() {
+        
+        firebase.child(kSHOPPINGLIST).child("1234").observe(.value, with: { snapshot in
+            //clear list
+            self.allLists.removeAll()
+            //check if exsist
+            if snapshot.exists(){
+                
+                let sorted = ((snapshot.value as! NSDictionary).allValues as NSArray).sortedArray(using:[NSSortDescriptor(key: kDATE, ascending: false)])
+                
+                for list in sorted {
+                    let currentList = list as! NSDictionary
+                    self.allLists.append(ShoppingList.init(dictionary: currentList))
+                }
+            }
+                
+            else{
+                print("no snapshot")
+            }
+            self.tableView.reloadData()
+        })
+    }
+    
     
     //MARK: Helper functions
     
