@@ -134,7 +134,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="D1J-Rp-kES" id="sWs-wQ-Oau"/>
-                        <segue destination="7g1-n1-mHq" kind="show" id="RzB-EB-FuY"/>
+                        <segue destination="7g1-n1-mHq" kind="show" identifier="shoppingListToShoppingItemSeg" id="RzB-EB-FuY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlz-EV-55l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ea7-pQ-zu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900.0000000000002" y="-298.36956521739131"/>
+            <point key="canvasLocation" x="1900" y="-307"/>
         </scene>
         <!--My List-->
         <scene sceneID="OHJ-ZV-CGT">

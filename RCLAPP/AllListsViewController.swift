@@ -40,6 +40,14 @@ class AllListsViewController: UIViewController,UITableViewDataSource,UITableView
         
         return cell
     }
+    
+    //MARK: TableView Delegate
+    //send data from selected item list to display it in details using segue 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: "shoppingListToShoppingItemSeg", sender: indexPath)
+    }
     //MARK: IBActions
     
     @IBAction func addBarItemButtonPressed(_ sender: Any) {
