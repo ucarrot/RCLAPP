@@ -16,6 +16,8 @@ class ShoppingItemViewController: UIViewController {
     @IBOutlet weak var itemsLeftLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var shoppingList : ShoppingList!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

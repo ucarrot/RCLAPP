@@ -42,7 +42,7 @@ class AllListsViewController: UIViewController,UITableViewDataSource,UITableView
     }
     
     //MARK: TableView Delegate
-    //send data from selected item list to display it in details using segue 
+    //send data from selected item list to display it in details using segue
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -104,6 +104,17 @@ class AllListsViewController: UIViewController,UITableViewDataSource,UITableView
         })
     }
     
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "shoppingListToShoppingItemSeg"
+        {
+            let indexPath = sender as! IndexPath
+            let shoppingList = allLists[indexPath.row]
+            //vc view controller
+            let vc = segue.destination as! ShoppingItemViewController
+            vc.shoppingList = shoppingList
+        }
+    }
     
     //MARK: Helper functions
     

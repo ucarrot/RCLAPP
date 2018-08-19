@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1525D4842129D5C400427042 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D4832129D5C400427042 /* AddItemViewController.swift */; };
 		15C580E9212479940039AA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C580E8212479940039AA36 /* AppDelegate.swift */; };
 		15C580EE212479940039AA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C580EC212479940039AA36 /* Main.storyboard */; };
 		15C580F3212479960039AA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C580F1212479960039AA36 /* LaunchScreen.storyboard */; };
@@ -18,10 +19,12 @@
 		15C581052127154D0039AA36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C581042127154D0039AA36 /* Constants.swift */; };
 		15C58107212718820039AA36 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C58106212718820039AA36 /* Utilities.swift */; };
 		15C5810B21286C210039AA36 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5810A21286C210039AA36 /* ListTableViewCell.swift */; };
+		15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5810D21287AA00039AA36 /* ShoppingItem.swift */; };
 		DF685E0BF69066DB1DFB045B /* Pods_RCLAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1525D4832129D5C400427042 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		15C580E5212479940039AA36 /* RCLAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCLAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C580E8212479940039AA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C580ED212479940039AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 		15C581042127154D0039AA36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15C58106212718820039AA36 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		15C5810A21286C210039AA36 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		15C5810D21287AA00039AA36 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		564423FF07EF58A3087044FA /* Pods-RCLAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		68F97D7A6C9DB7256F849B77 /* Pods-RCLAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.release.xcconfig"; sourceTree = "<group>"; };
 		909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCLAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +80,8 @@
 				15C580E8212479940039AA36 /* AppDelegate.swift */,
 				15C580FE2125F9C00039AA36 /* AllListsViewController.swift */,
 				15C5810021270D390039AA36 /* ShoppingItemViewController.swift */,
-				15C5810A21286C210039AA36 /* ListTableViewCell.swift */,
+				1525D4832129D5C400427042 /* AddItemViewController.swift */,
+				15C5810C212878BE0039AA36 /* CustomCell */,
 				15C581082127364E0039AA36 /* Model */,
 				15C581092127365A0039AA36 /* Helpers */,
 				15C580EC212479940039AA36 /* Main.storyboard */,
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				15C58102212712BA0039AA36 /* ShoppingList.swift */,
+				15C5810D21287AA00039AA36 /* ShoppingItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +109,14 @@
 				15C58106212718820039AA36 /* Utilities.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		15C5810C212878BE0039AA36 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				15C5810A21286C210039AA36 /* ListTableViewCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		4303D66EF8F4EC03783D6FEA /* Frameworks */ = {
@@ -251,6 +265,8 @@
 				15C58107212718820039AA36 /* Utilities.swift in Sources */,
 				15C581052127154D0039AA36 /* Constants.swift in Sources */,
 				15C5810121270D390039AA36 /* ShoppingItemViewController.swift in Sources */,
+				15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */,
+				1525D4842129D5C400427042 /* AddItemViewController.swift in Sources */,
 				15C58103212712BA0039AA36 /* ShoppingList.swift in Sources */,
 				15C580FF2125F9C00039AA36 /* AllListsViewController.swift in Sources */,
 				15C580E9212479940039AA36 /* AppDelegate.swift in Sources */,
