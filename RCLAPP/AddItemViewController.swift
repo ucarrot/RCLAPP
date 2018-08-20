@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class AddItemViewController: UIViewController {
 
+    
+    @IBOutlet weak var itemImageView: UIImageView!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var extraInfoTextField: UITextField!
+    @IBOutlet weak var quantityTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
+    var shoppingList : ShoppingList!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: IBAction
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+            //check if the item details is empty
+        if nameTextField.text != "" && priceTextField.text != "" {
+            saveItem()
+        }
+           
+        else {
+            KRProgressHUD.showWarning(withMessage: "Empty Fields!")
+        }
+    }
+     //dismiss if cancel
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
+    //MARK: Save item
+    func saveItem() {
+        let shoppingItem = ShoppingItem(_name: nameTextField.text!, _info: extraInfoTextField.text!, _quantity: quantityTextField.text!, _price: Float(priceTextField.text!)!, _shoppingListId: shoppingList.id)
+        
+        shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
+        if error != nil
+            {
+                KRProgressHUD.showError(withMessage: "Error saving shopping item ")
+                return
+            }
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+   
 }

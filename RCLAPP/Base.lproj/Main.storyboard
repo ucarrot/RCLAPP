@@ -229,7 +229,7 @@
         <!--Add Item View Controller-->
         <scene sceneID="BfV-8K-mkh">
             <objects>
-                <viewController id="1BO-CZ-3KS" customClass="AddItemViewController" customModule="RCLAPP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddItemVC" id="1BO-CZ-3KS" customClass="AddItemViewController" customModule="RCLAPP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c1X-4m-Xlm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,28 +237,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDW-8j-eeF">
                                 <rect key="frame" x="0.0" y="20" width="414" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-aR-poo">
-                                        <rect key="frame" x="359" y="20" width="47" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="2lA-QD-AxS"/>
-                                            <constraint firstAttribute="width" constant="34" id="WrJ-Fd-leD"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Save">
-                                            <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnR-g4-Xeq">
-                                        <rect key="frame" x="8" y="20" width="61" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="KrI-GL-rIl"/>
-                                            <constraint firstAttribute="width" constant="48" id="xBP-ih-2Pe"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVa-ig-nR7">
                                         <rect key="frame" x="8" y="25" width="398" height="21"/>
                                         <constraints>
@@ -269,6 +247,34 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-aR-poo">
+                                        <rect key="frame" x="306" y="20" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="2lA-QD-AxS"/>
+                                            <constraint firstAttribute="width" constant="34" id="WrJ-Fd-leD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="1BO-CZ-3KS" eventType="touchUpInside" id="w2P-z3-MeH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnR-g4-Xeq">
+                                        <rect key="frame" x="8" y="20" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KrI-GL-rIl"/>
+                                            <constraint firstAttribute="width" constant="48" id="xBP-ih-2Pe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="1BO-CZ-3KS" eventType="touchUpInside" id="QG9-7e-D7H"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -358,6 +364,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BNW-GW-UHt"/>
                     </view>
+                    <connections>
+                        <outlet property="extraInfoTextField" destination="gld-uY-f7h" id="rgX-Tn-qUs"/>
+                        <outlet property="itemImageView" destination="nkL-6D-aYd" id="EjP-IE-9Vu"/>
+                        <outlet property="nameTextField" destination="cHE-qI-N9q" id="K5H-Pa-H3j"/>
+                        <outlet property="priceTextField" destination="qOq-xU-4Rq" id="UdJ-JE-tew"/>
+                        <outlet property="quantityTextField" destination="mha-S7-WX7" id="jtm-sM-I9R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0R-yK-OF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
