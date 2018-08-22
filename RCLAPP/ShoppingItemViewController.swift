@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SwipeCellKit
+import KRProgressHUD
 
-class ShoppingItemViewController: UIViewController {
+class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate {
 
     
     
@@ -18,12 +20,81 @@ class ShoppingItemViewController: UIViewController {
     
     var shoppingList : ShoppingList!
     
+    var shoppingItems : [ShoppingItem] = []
+    var boughtItems : [ShoppingItem] = []
+    
+    // swipe left and right
+    var defaultOptions = SwipeTableOptions()
+    var isSwipeRightEnabled = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadShoppingItems()
     }
 
+    //MARK: TableView Data Source
+    
+        //    function 1
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+        //    function 2
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return shoppingItems.count
+            
+        }else {
+            return boughtItems.count
+        }
+    }
+        //    function 3
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ShoppingItemTableViewCell
+        
+        cell.delegate = self
+        cell.selectedBackgroundView = createSelectedBackgroundView()
+        
+        var item: ShoppingItem!
+        if indexPath.section == 0 {
+            item = shoppingItems[indexPath.row]
+            
+        }else {
+            item = boughtItems[indexPath.row]
+        }
+        cell.bindData(item: item)
+        
+        return cell
+    }
+    
+    //MARK: TableViewDelegates
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        var title : String!
+        
+        if section == 0 {
+            title = "Shopping List"
+        }else {
+            title = "Bought List"
+        }
+        
+        return titleViewForTable(titleText: title)
+    }
+    //to make empty space between two sections
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 15
+    }
     //MARK: IBActions
     
     @IBAction func addBarButtonItemPressed(_ sender: Any) {
@@ -32,6 +103,123 @@ class ShoppingItemViewController: UIViewController {
         
         vc.shoppingList = self.shoppingList
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    //MARK: Load Shopping items
+    func loadShoppingItems() {
+        firebase.child(kSHOPPINGITEM).child(shoppingList.id).queryOrdered(byChild: kSHOPPINGLISTID).queryEqual(toValue: shoppingList.id).observe(.value, with: {
+            
+            snapshot in
+            
+            self.shoppingItems.removeAll()
+            self.boughtItems.removeAll()
+            
+            if snapshot.exists() {
+                let allItems = (snapshot.value as! NSDictionary).allValues as Array
+                for item in allItems {
+                    let currentItem = ShoppingItem.init(dictionary: item as! NSDictionary)
+                    
+                    if currentItem.isBought {
+                        self.boughtItems.append(currentItem)
+                    } else {
+                        self.shoppingItems.append(currentItem)
+                    }
+                }
+            } else {
+                print("no snapshots")
+            }
+            
+            self.tableView.reloadData()
+        
+        })
+    }
+    
+    //MARK: SwipeTableViewCell delegate functions
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        var item : ShoppingItem!
+        
+        if indexPath.section == 0 {
+            item = shoppingItems[indexPath.row]
+        }else {
+            item = boughtItems[indexPath.row]
+        }
+        if orientation == .left {
+            guard isSwipeRightEnabled else {return nil}
+            
+            let buyItem = SwipeAction(style: .default, title: nil, handler: { action, indexPath in
+                
+                item.isBought = !item.isBought
+                item.updateItemInBackground(shoppingItem: item, completion: { (error) in
+                    if error != nil {
+                        KRProgressHUD.showError(withMessage: "Error couldnt update item")
+                        return
+                    }
+                    })
+                
+                if indexPath.section == 0 {
+                        self.shoppingItems.remove(at: indexPath.row)
+                        self.boughtItems.append(item)
+                    }else {
+                        self.shoppingItems.append(item)
+                        self.boughtItems.remove(at: indexPath.row)
+                    }
+                    tableView.reloadData()
+            })
+            buyItem.accessibilityLabel = item.isBought ? "Buy" : "Return"
+            let descriptor: ActionDescriptor = item.isBought ? .returnPurchase : .buy
+            
+            configure(action: buyItem, with: descriptor)
+            
+            return [buyItem]
+        } else {
+            let delete = SwipeAction(style: .destructive, title: nil, handler: { (action, indexPath) in
+                if indexPath.section == 0 {
+                    self.shoppingItems.remove(at: indexPath.row)
+                } else {
+                    self.boughtItems.remove(at: indexPath.row)
+                }
+                item.deleteItemInBackground(shoppingItem: item)
+                
+                self.tableView.beginUpdates()
+                action.fulfill(with: .delete)
+                self.tableView.endUpdates()
+            })
+            configure(action: delete, with: .trash)
+            return [delete]
+        }
+    }
+    
+    func configure(action: SwipeAction, with descriptor: ActionDescriptor) {
+        
+        action.title =  descriptor.title()
+        action.image = descriptor.image()
+        action.backgroundColor = descriptor.color
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeTableOptions()
+        options.expansionStyle = orientation == .left ? .selection : .destructive
+        options.transitionStyle = defaultOptions.transitionStyle
+        options.buttonSpacing = 11
+        
+        return options
+    }
+    
+    //MARK : Helper functions
+    
+    func titleViewForTable(titleText: String) -> UIView {
+        
+        let view = UIView()
+        view.backgroundColor = .darkGray
+        
+        let titleLabel = UILabel(frame: CGRect(x: 10, y: 5, width: 200, height: 20))
+        titleLabel.text = titleText
+        titleLabel.textColor = .white
+        
+        view.addSubview(titleLabel)
+        
+        return view
     }
     
 

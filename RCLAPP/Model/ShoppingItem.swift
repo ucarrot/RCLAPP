@@ -58,10 +58,24 @@ func saveItemInBackground(shoppingItem: ShoppingItem, completion: @escaping (_ e
         completion(error)
     }
 }
+    //update items
+    func updateItemInBackground(shoppingItem: ShoppingItem, completion: @escaping (_ error: Error?) -> Void) {
+        let ref = firebase.child(kSHOPPINGITEM).child(shoppingItem.shoppingListId).child(shoppingItem.shoppingItemId)
+        ref.setValue(dictionaryFromItem(item: shoppingItem)) {
+            error, ref in
+            
+            completion(error)
+        }
+    }
+    
+    
 //delete items
 func deleteItemInBackground(shoppingItem: ShoppingItem) {
     let ref = firebase.child(kSHOPPINGITEM).child(shoppingItem.shoppingListId).child(shoppingItem.shoppingItemId)
     ref.removeValue()
 }
+    
+   
+    
 
 }

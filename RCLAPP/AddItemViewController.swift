@@ -37,6 +37,7 @@ class AddItemViewController: UIViewController {
         else {
             KRProgressHUD.showWarning(withMessage: "Empty Fields!")
         }
+        self.dismiss(animated: true, completion: nil)
     }
      //dismiss if cancel
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -53,6 +54,7 @@ class AddItemViewController: UIViewController {
                 KRProgressHUD.showError(withMessage: "Error saving shopping item ")
                 return
             }
+            
         }
 
     }

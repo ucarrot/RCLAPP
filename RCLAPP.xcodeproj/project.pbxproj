@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1525D4842129D5C400427042 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D4832129D5C400427042 /* AddItemViewController.swift */; };
+		1525D486212B202D00427042 /* ShoppingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D485212B202D00427042 /* ShoppingItemTableViewCell.swift */; };
+		1525D488212D6CD800427042 /* SwipeTableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D487212D6CD800427042 /* SwipeTableViewHelpers.swift */; };
 		15C580E9212479940039AA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C580E8212479940039AA36 /* AppDelegate.swift */; };
 		15C580EE212479940039AA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C580EC212479940039AA36 /* Main.storyboard */; };
 		15C580F3212479960039AA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C580F1212479960039AA36 /* LaunchScreen.storyboard */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		1525D4832129D5C400427042 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		1525D485212B202D00427042 /* ShoppingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewCell.swift; sourceTree = "<group>"; };
+		1525D487212D6CD800427042 /* SwipeTableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewHelpers.swift; sourceTree = "<group>"; };
 		15C580E5212479940039AA36 /* RCLAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCLAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C580E8212479940039AA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C580ED212479940039AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			children = (
 				15C581042127154D0039AA36 /* Constants.swift */,
 				15C58106212718820039AA36 /* Utilities.swift */,
+				1525D487212D6CD800427042 /* SwipeTableViewHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				15C5810A21286C210039AA36 /* ListTableViewCell.swift */,
+				1525D485212B202D00427042 /* ShoppingItemTableViewCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -267,6 +273,8 @@
 				15C5810121270D390039AA36 /* ShoppingItemViewController.swift in Sources */,
 				15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */,
 				1525D4842129D5C400427042 /* AddItemViewController.swift in Sources */,
+				1525D486212B202D00427042 /* ShoppingItemTableViewCell.swift in Sources */,
+				1525D488212D6CD800427042 /* SwipeTableViewHelpers.swift in Sources */,
 				15C58103212712BA0039AA36 /* ShoppingList.swift in Sources */,
 				15C580FF2125F9C00039AA36 /* AllListsViewController.swift in Sources */,
 				15C580E9212479940039AA36 /* AppDelegate.swift in Sources */,
