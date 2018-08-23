@@ -35,13 +35,18 @@ class ShoppingItemTableViewCell: SwipeTableViewCell {
         self.nameLabel.text = item.name
         self.extraInfoLabel.text = item.info
         self.quantityLabel.text = item.quantity
-        self.priceLabel.text = "AED \(item.price)"
+        self.priceLabel.text = "AED \(String(format: "%.2f", item.price))"
         
         self.priceLabel.sizeToFit()
         self.extraInfoLabel.sizeToFit()
         self.nameLabel.sizeToFit()
         
         //add image
+        if item.image != "" {
+            //create image
+        }else {
+            //set the place holder
+        }
     }
 
 }

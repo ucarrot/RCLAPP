@@ -228,11 +228,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14y-6Y-VWn">
-                                        <rect key="frame" x="263" y="9" width="143" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14y-6Y-VWn">
+                                        <rect key="frame" x="216" y="9" width="190" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="JHu-yf-cEz"/>
-                                            <constraint firstAttribute="width" constant="143" id="i17-Xf-Wvo"/>
+                                            <constraint firstAttribute="width" constant="190" id="i17-Xf-Wvo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -246,10 +246,10 @@
                                     <constraint firstAttribute="height" constant="40" id="K4V-mi-ydo"/>
                                     <constraint firstAttribute="bottom" secondItem="14y-6Y-VWn" secondAttribute="bottom" constant="10" id="RyL-xd-wD5"/>
                                     <constraint firstItem="3OZ-DX-zoe" firstAttribute="leading" secondItem="JNi-AL-gpg" secondAttribute="leading" constant="8" id="bFc-5t-4ER"/>
-                                    <constraint firstItem="14y-6Y-VWn" firstAttribute="leading" secondItem="3OZ-DX-zoe" secondAttribute="trailing" constant="115" id="dvp-Tj-Ga9"/>
+                                    <constraint firstItem="14y-6Y-VWn" firstAttribute="leading" secondItem="3OZ-DX-zoe" secondAttribute="trailing" constant="68" id="dvp-Tj-Ga9"/>
                                     <constraint firstItem="14y-6Y-VWn" firstAttribute="centerY" secondItem="JNi-AL-gpg" secondAttribute="centerY" id="fUM-Ms-Oj3"/>
                                     <constraint firstItem="14y-6Y-VWn" firstAttribute="top" secondItem="JNi-AL-gpg" secondAttribute="top" constant="9" id="iBL-vv-opH"/>
-                                    <constraint firstItem="14y-6Y-VWn" firstAttribute="leading" secondItem="3OZ-DX-zoe" secondAttribute="trailing" constant="115" id="ien-UH-1oU"/>
+                                    <constraint firstItem="14y-6Y-VWn" firstAttribute="leading" secondItem="3OZ-DX-zoe" secondAttribute="trailing" constant="68" id="ien-UH-1oU"/>
                                     <constraint firstAttribute="bottom" secondItem="3OZ-DX-zoe" secondAttribute="bottom" constant="9" id="j14-1D-dK4"/>
                                     <constraint firstItem="3OZ-DX-zoe" firstAttribute="top" secondItem="JNi-AL-gpg" secondAttribute="top" constant="10" id="o9M-ck-pzn"/>
                                     <constraint firstItem="3OZ-DX-zoe" firstAttribute="centerY" secondItem="JNi-AL-gpg" secondAttribute="centerY" id="wdU-me-uNj"/>

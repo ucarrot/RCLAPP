@@ -27,6 +27,8 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
     var defaultOptions = SwipeTableOptions()
     var isSwipeRightEnabled = true
     
+    var totalPrice: Float!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -129,11 +131,18 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
                 print("no snapshots")
             }
             
-            self.tableView.reloadData()
+            self.calculateTotal()
+            self.updateUI()
         
         })
     }
     
+    func updateUI() {
+        self.itemsLeftLabel.text = "Items Left: \(self.shoppingItems.count)"
+        self.totalPriceLabel.text = "Total Price: AED\(String (format: "%0.2f", self.totalPrice!))"
+        
+        self.tableView.reloadData()
+    }
     //MARK: SwipeTableViewCell delegate functions
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
@@ -207,7 +216,26 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     //MARK : Helper functions
-    
+    func calculateTotal() {
+        self.totalPrice = 0
+        
+        for item in boughtItems {
+            self.totalPrice = self.totalPrice + item.price
+        }
+        for item in shoppingItems {
+            totalPrice = totalPrice + item.price
+        }
+        self.totalPriceLabel.text = "Total Price: \(String(format:"%0.2f",self.totalPrice!))"
+        shoppingList.totalPrice = self.totalPrice
+        shoppingList.totalItems = self.boughtItems.count + self.shoppingItems.count
+        
+        shoppingList.updateItemInBackground(shoppingList: shoppingList) { (error) in
+            if error != nil {
+                KRProgressHUD.showError(withMessage: "Error updating shopping list")
+                return
+            }
+        }
+    }
     func titleViewForTable(titleText: String) -> UIView {
         
         let view = UIView()
