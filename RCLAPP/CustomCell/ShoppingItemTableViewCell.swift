@@ -43,9 +43,15 @@ class ShoppingItemTableViewCell: SwipeTableViewCell {
         
         //add image
         if item.image != "" {
-            //create image
+            
+            imageFromData(pictureData: item.image, withBlock: { (image) in
+                let newImage = image!.scaleImageToSize(newSize: imageItemView.frame.size)
+                self.imageItemView.image = newImage.circleMasked
+            })
+            
         }else {
-            //set the place holder
+            let newImage = UIImage(named: "ShoppingCartEmpty")!.scaleImageToSize(newSize: imageItemView.frame.size)
+            self.imageItemView.image = newImage.circleMasked
         }
     }
 
