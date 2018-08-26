@@ -76,8 +76,16 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     
     //MARK: Save item
     func saveItem() {
-        let shoppingItem = ShoppingItem(_name: nameTextField.text!, _info: extraInfoTextField.text!, _quantity: quantityTextField.text!, _price: Float(priceTextField.text!)!, _shoppingListId: shoppingList.id)
         
+        var imageData: String!
+        if itemImage != nil {
+            let image = UIImageJPEGRepresentation(itemImage!, 0.5)
+            imageData = image?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
+        }else {
+            imageData = ""
+        }
+        let shoppingItem = ShoppingItem(_name: nameTextField.text!, _info: extraInfoTextField.text!, _quantity: quantityTextField.text!, _price: Float(priceTextField.text!)!, _shoppingListId: shoppingList.id)
+        shoppingItem.image = imageData
         shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
         if error != nil
             {
