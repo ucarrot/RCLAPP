@@ -25,8 +25,13 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let image = UIImage(named: "ShoppingCartEmpty")!.scaleImageToSize(newSize: itemImageView.frame.size)
+        itemImageView.image = image.circleMasked
+        
+        if shoppingItem != nil {
+            updateUI()
+        }
     }
 
     //MARK: IBAction
@@ -106,6 +111,26 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         self.itemImageView.image = newImage.circleMasked
         
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: UpdateUI
+    
+    func updateUI() {
+        if shoppingItem != nil {
+            self.nameTextField.text = self.shoppingItem!.name
+            self.extraInfoTextField.text = self.shoppingItem!.info
+            self.quantityTextField.text = self.shoppingItem!.quantity
+            self.priceTextField.text = "\(self.shoppingItem!.price)"
+            
+            if shoppingItem!.image != "" {
+                imageFromData(pictureData: shoppingItem!.image, withBlock: {(image) in
+                    
+                    let newImage = image!.scaleImageToSize(newSize: itemImageView.frame.size)
+                    self.itemImageView.image = newImage.circleMasked
+                    
+                })
+            }
+        }
     }
    
 }
