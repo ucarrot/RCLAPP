@@ -72,7 +72,23 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     //MARK: TableViewDelegates
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var item: ShoppingItem!
+        if indexPath.section == 0 {
+            item = shoppingItems[indexPath.row]
+            
+        }else {
+            item = boughtItems[indexPath.row]
+        }
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemVC") as! AddItemViewController
+        
+        vc.shoppingList = shoppingList
+        vc.shoppingItem = item
+        
+        self.present(vc, animated: true, completion: nil)
+    }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         var title : String!

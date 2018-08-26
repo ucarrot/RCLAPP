@@ -19,6 +19,7 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     var shoppingList : ShoppingList!
+    var shoppingItem : ShoppingItem?
     
     var itemImage: UIImage?
     
