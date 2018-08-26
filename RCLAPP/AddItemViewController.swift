@@ -67,7 +67,11 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     @IBAction func saveButtonPressed(_ sender: Any) {
             //check if the item details is empty
         if nameTextField.text != "" && priceTextField.text != "" {
-            saveItem()
+            if shoppingItem != nil {
+                self.updateItem()
+            }else {
+                saveItem()
+            }
         }
            
         else {
@@ -81,6 +85,37 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     }
     
     //MARK: Save item
+    func updateItem(){
+        var imageData: String!
+        
+        if itemImage != nil {
+            let image = UIImageJPEGRepresentation(itemImage!, 0.5)
+            imageData = image?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
+        }else {
+            imageData = ""
+        }
+        
+        if shoppingItem != nil {
+            shoppingItem!.name = nameTextField.text!
+            shoppingItem!.info = extraInfoTextField.text!
+            shoppingItem!.quantity = quantityTextField.text!
+            shoppingItem!.price = Float(priceTextField.text!)!
+            
+            shoppingItem!.image = imageData
+            
+            shoppingItem?.updateItemInBackground(shoppingItem: shoppingItem!, completion: {
+                (error) in
+                
+                if error != nil {
+                    KRProgressHUD.showError(withMessage: "Error updating item")
+                    return
+                }
+            })
+            
+        }else {
+            //update grocery item
+        }
+    }
     func saveItem() {
         
         var imageData: String!
@@ -125,6 +160,7 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
             if shoppingItem!.image != "" {
                 imageFromData(pictureData: shoppingItem!.image, withBlock: {(image) in
                     
+                    self.itemImage = image!
                     let newImage = image!.scaleImageToSize(newSize: itemImageView.frame.size)
                     self.itemImageView.image = newImage.circleMasked
                     
