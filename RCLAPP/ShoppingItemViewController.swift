@@ -117,10 +117,34 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBAction func addBarButtonItemPressed(_ sender: Any) {
         
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemVC") as! AddItemViewController
         
-        vc.shoppingList = self.shoppingList
-        self.present(vc, animated: true, completion: nil)
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle:.actionSheet )
+        
+        let newItemAction = UIAlertAction(title: "New Item", style: .default) { (action) in
+            
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemVC") as! AddItemViewController
+            
+            vc.shoppingList = self.shoppingList
+            self.present(vc, animated: true, completion: nil)
+        }
+        
+        let searchItemAction = UIAlertAction(title: "Search Item", style: .default) { (action) in
+            
+          
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (action) in
+            
+        }
+        
+        optionMenu.addAction(newItemAction)
+        optionMenu.addAction(searchItemAction)
+        optionMenu.addAction(cancelAction)
+        
+        self.present(optionMenu, animated: true, completion: nil)
+        
+       
     }
     
     //MARK: Load Shopping items
