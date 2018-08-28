@@ -12,6 +12,7 @@ import SwipeCellKit
 class ShoppingItemTableViewCell: SwipeTableViewCell {
 
     
+    @IBOutlet weak var quantityBackgroundView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var imageItemView: UIImageView!
@@ -21,7 +22,8 @@ class ShoppingItemTableViewCell: SwipeTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.quantityBackgroundView.layer.cornerRadius = self.quantityBackgroundView.frame.width / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
