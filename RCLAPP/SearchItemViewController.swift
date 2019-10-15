@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchItemViewController: UIViewController {
+class SearchItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var addButtonOutlet: UIButton!
     
@@ -18,11 +18,19 @@ class SearchItemViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    
+//MARK: TableView Data Source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
     //MARK: UIActions
     
     @IBAction func addItemButtonPressed(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemVC") as! AddItemViewController
+        vc.addingToList = true
+        self.present(vc, animated: true, completion: nil)
     }
     
 

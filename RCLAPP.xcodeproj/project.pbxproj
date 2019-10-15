@@ -25,6 +25,7 @@
 		15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5810D21287AA00039AA36 /* ShoppingItem.swift */; };
 		865938F32136FCC3009DF2F4 /* SearchItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */; };
 		865938F52136FDBB009DF2F4 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */; };
+		868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D7D5F23564C9B005CAD93 /* GroceryItem.swift */; };
 		DF685E0BF69066DB1DFB045B /* Pods_RCLAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		68F97D7A6C9DB7256F849B77 /* Pods-RCLAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.release.xcconfig"; sourceTree = "<group>"; };
 		865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewController.swift; sourceTree = "<group>"; };
 		865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
+		868D7D5F23564C9B005CAD93 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCLAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			children = (
 				15C58102212712BA0039AA36 /* ShoppingList.swift */,
 				15C5810D21287AA00039AA36 /* ShoppingItem.swift */,
+				868D7D5F23564C9B005CAD93 /* GroceryItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				1525D48A212EF47F00427042 /* Camera.swift in Sources */,
 				15C58103212712BA0039AA36 /* ShoppingList.swift in Sources */,
 				15C580FF2125F9C00039AA36 /* AllListsViewController.swift in Sources */,
+				868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */,
 				15C580E9212479940039AA36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

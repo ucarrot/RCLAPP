@@ -21,6 +21,8 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     var shoppingList : ShoppingList!
     var shoppingItem : ShoppingItem?
     
+    var addingToList: Bool?
+    
     var itemImage: UIImage?
     
     override func viewDidLoad() {
@@ -117,6 +119,7 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         }
     }
     func saveItem() {
+        var shoppingItem: ShoppingItem
         
         var imageData: String!
         if itemImage != nil {
@@ -125,16 +128,39 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         }else {
             imageData = ""
         }
-        let shoppingItem = ShoppingItem(_name: nameTextField.text!, _info: extraInfoTextField.text!, _quantity: quantityTextField.text!, _price: Float(priceTextField.text!)!, _shoppingListId: shoppingList.id)
-        shoppingItem.image = imageData
-        shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
-        if error != nil
-            {
-                KRProgressHUD.showError(withMessage: "Error saving shopping item ")
-                return
-            }
+        
+        if addingToList! {
+            //add to groceryList only
+            shoppingItem = ShoppingItem(_name: nameTextField.text!, _info: extraInfoTextField.text!, _price: Float(priceTextField.text!)!, _shoppingListId: "")
             
+            let groceryItem = GroceryItem(shoppingItem: shoppingItem)
+            groceryItem.image = imageData
+            
+            groceryItem.saveItemInBackground(groceryItem: groceryItem, completion:{ (error) in
+            
+                if error != nil {
+                
+                    KRProgressHUD.showError(withMessage: "Error saving grocery item")
+                return
+                }
+            })
+            self.dismiss(animated: true, completion: nil)
+            
+        }else {
+            // add to current shopping list
+            let shoppingItem = ShoppingItem(_name: nameTextField.text!, _info: extraInfoTextField.text!, _quantity: quantityTextField.text!, _price: Float(priceTextField.text!)!, _shoppingListId: shoppingList.id)
+            shoppingItem.image = imageData
+            shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
+            if error != nil
+                {
+                    KRProgressHUD.showError(withMessage: "Error saving shopping item ")
+                    return
+                }
+                
+            }
         }
+        
+        
 
     }
     //MARK: UIImagePikerController delegate
