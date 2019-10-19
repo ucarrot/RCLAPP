@@ -29,7 +29,7 @@ class GroceryItemTableViewCell: ShoppingItemTableViewCell {
         self.extraInfoLabel.text = item.info
         self.priceLabel.text = "AED \(String(format: "%.2f", item.price))"
         
-        if item.info != "" {
+        if item.image != "" {
             imageFromData(pictureData: item.image, withBlock: { (image) in
                 self.imageItemView.image = image!.circleMasked
             })
