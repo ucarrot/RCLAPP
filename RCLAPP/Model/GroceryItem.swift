@@ -35,7 +35,7 @@ class GroceryItem {
         ownerId = dictionary[kOWNERID] as! String
         groceryItemId = dictionary[kGROCERYITEMID] as! String
     }
-    
+    //initilizer pre-defined data 
     init(shoppingItem: ShoppingItem){
         
         name = shoppingItem.name
@@ -48,7 +48,7 @@ class GroceryItem {
     
     func dictionaryFromItem(item: GroceryItem) -> NSDictionary {
         
-        return NSDictionary(objects: [item.name,item.info,item.price,item.ownerId,item.image, item.groceryItemId], forKeys: [kNAME as NSCopying,kINFO as NSCopying,kQUANTITY as NSCopying,kPRICE as NSCopying, kOWNERID as NSCopying,kIMAGE as NSCopying, kGROCERYITEMID as NSCopying])
+        return NSDictionary(objects: [item.name,item.info,item.price,item.ownerId,item.image,item.groceryItemId], forKeys: [kNAME as NSCopying,kINFO as NSCopying,kPRICE as NSCopying, kOWNERID as NSCopying,kIMAGE as NSCopying, kGROCERYITEMID as NSCopying])
     }
     
     //save update and delete functions

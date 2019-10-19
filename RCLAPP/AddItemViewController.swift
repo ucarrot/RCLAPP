@@ -119,13 +119,15 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         }
     }
     func saveItem() {
+        
         var shoppingItem: ShoppingItem
         
         var imageData: String!
+        
         if itemImage != nil {
             let image = UIImageJPEGRepresentation(itemImage!, 0.5)
             imageData = image?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
-        }else {
+        } else {
             imageData = ""
         }
         
@@ -151,17 +153,15 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
             let shoppingItem = ShoppingItem(_name: nameTextField.text!, _info: extraInfoTextField.text!, _quantity: quantityTextField.text!, _price: Float(priceTextField.text!)!, _shoppingListId: shoppingList.id)
             shoppingItem.image = imageData
             shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
-            if error != nil
-                {
+            if error != nil {
+                
                     KRProgressHUD.showError(withMessage: "Error saving shopping item ")
                     return
                 }
                 
             }
         }
-        
-        
-
+  
     }
     //MARK: UIImagePikerController delegate
     
