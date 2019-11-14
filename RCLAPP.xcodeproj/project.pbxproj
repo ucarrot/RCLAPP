@@ -34,7 +34,7 @@
 		1525D485212B202D00427042 /* ShoppingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewCell.swift; sourceTree = "<group>"; };
 		1525D487212D6CD800427042 /* SwipeTableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewHelpers.swift; sourceTree = "<group>"; };
 		1525D489212EF47F00427042 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
-		15C580E5212479940039AA36 /* BuyMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C580E5212479940039AA36 /* Listah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Listah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C580E8212479940039AA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C580ED212479940039AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15C580F2212479960039AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		15C580E6212479940039AA36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15C580E5212479940039AA36 /* BuyMe.app */,
+				15C580E5212479940039AA36 /* Listah.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			);
 			name = RCLAPP;
 			productName = RCLAPP;
-			productReference = 15C580E5212479940039AA36 /* BuyMe.app */;
+			productReference = 15C580E5212479940039AA36 /* Listah.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -454,7 +454,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ucarrot.RCLAPP;
-				PRODUCT_NAME = BuyMe;
+				PRODUCT_NAME = Listah;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,7 +473,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ucarrot.RCLAPP;
-				PRODUCT_NAME = BuyMe;
+				PRODUCT_NAME = Listah;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
