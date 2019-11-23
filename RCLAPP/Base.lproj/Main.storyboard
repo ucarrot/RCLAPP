@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qeO-NF-43Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qeO-NF-43Y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +32,7 @@
         <!--All List-->
         <scene sceneID="AHL-Xc-lP9">
             <objects>
-                <viewController id="Hw4-D2-XFP" customClass="AllListsViewController" customModule="BuyMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hw4-D2-XFP" customClass="AllListsViewController" customModule="Listah" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dN0-FU-bTZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="IvN-Tf-Mky" customClass="ListTableViewCell" customModule="BuyMe" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="IvN-Tf-Mky" customClass="ListTableViewCell" customModule="Listah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IvN-Tf-Mky" id="37c-P4-4X5">
@@ -144,7 +144,7 @@
         <!--Shopping Items-->
         <scene sceneID="qYj-fm-gFx">
             <objects>
-                <viewController id="7g1-n1-mHq" customClass="ShoppingItemViewController" customModule="BuyMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7g1-n1-mHq" customClass="ShoppingItemViewController" customModule="Listah" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jFo-Kc-vQd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,7 +153,7 @@
                                 <rect key="frame" x="0.0" y="127" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="g4q-qV-eXZ" customClass="ShoppingItemTableViewCell" customModule="BuyMe" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="g4q-qV-eXZ" customClass="ShoppingItemTableViewCell" customModule="Listah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g4q-qV-eXZ" id="gN9-YL-GoM">
@@ -307,27 +307,107 @@
         <!--Chat-->
         <scene sceneID="bsR-8D-NtK">
             <objects>
-                <viewController title="Chat" id="MsG-lw-50i" sceneMemberID="viewController">
+                <viewController title="Chat" id="MsG-lw-50i" customClass="WelcomeViewController" customModule="Listah" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="toN-P5-zmZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat system" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-qu-kBt">
-                                <rect key="frame" x="159" y="300" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-Lk-7P7">
+                                <rect key="frame" x="20" y="149" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <connections>
+                                    <action selector="emailTextField:" destination="MsG-lw-50i" eventType="editingDidEnd" id="86a-jh-INW"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Se-6FU">
+                                <rect key="frame" x="20" y="204" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFe-Vj-BSP">
+                                <rect key="frame" x="20" y="259" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik3-jE-FQn">
+                                <rect key="frame" x="267" y="324" width="127" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8Pj-c9-7a3"/>
+                                    <constraint firstAttribute="width" constant="127" id="D34-ij-chT"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="MsG-lw-50i" eventType="touchUpInside" id="rCX-PJ-j2G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeU-XZ-2sc">
+                                <rect key="frame" x="20" y="324" width="127" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="2vD-ca-5bt"/>
+                                    <constraint firstAttribute="height" constant="30" id="w51-BC-zB1"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="MsG-lw-50i" eventType="touchUpInside" id="foG-L1-wRX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listah Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="90" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-qu-kBt">
+                                <rect key="frame" x="137" y="60" width="139" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VKz-jZ-Y5V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="0xT-qu-kBt" firstAttribute="leading" secondItem="KP1-yR-SNi" secondAttribute="leading" constant="137" id="AlJ-WW-RwK"/>
+                            <constraint firstItem="lBe-Lk-7P7" firstAttribute="top" secondItem="0xT-qu-kBt" secondAttribute="bottom" constant="68" id="Alg-z3-K6x"/>
+                            <constraint firstItem="KP1-yR-SNi" firstAttribute="trailing" secondItem="lBe-Lk-7P7" secondAttribute="trailing" constant="20" id="C2l-I2-cy1"/>
+                            <constraint firstItem="AFe-Vj-BSP" firstAttribute="leading" secondItem="KP1-yR-SNi" secondAttribute="leading" constant="20" id="DEu-Dc-KpM"/>
+                            <constraint firstItem="KP1-yR-SNi" firstAttribute="trailing" secondItem="UWd-Se-6FU" secondAttribute="trailing" constant="20" id="HN0-iI-9Xy"/>
+                            <constraint firstItem="KP1-yR-SNi" firstAttribute="trailing" secondItem="ik3-jE-FQn" secondAttribute="trailing" constant="20" id="Rdc-zK-71j"/>
+                            <constraint firstItem="UWd-Se-6FU" firstAttribute="leading" secondItem="KP1-yR-SNi" secondAttribute="leading" constant="20" id="cVQ-QO-uyj"/>
+                            <constraint firstItem="0xT-qu-kBt" firstAttribute="top" secondItem="KP1-yR-SNi" secondAttribute="top" constant="16" id="iVW-f6-SlO"/>
+                            <constraint firstItem="AFe-Vj-BSP" firstAttribute="top" secondItem="UWd-Se-6FU" secondAttribute="bottom" constant="21" id="ifX-kn-6dH"/>
+                            <constraint firstItem="UWd-Se-6FU" firstAttribute="top" secondItem="lBe-Lk-7P7" secondAttribute="bottom" constant="21" id="nfH-Ef-XCn"/>
+                            <constraint firstItem="ik3-jE-FQn" firstAttribute="top" secondItem="AFe-Vj-BSP" secondAttribute="bottom" constant="31" id="oZK-Gn-LNr"/>
+                            <constraint firstItem="lBe-Lk-7P7" firstAttribute="leading" secondItem="KP1-yR-SNi" secondAttribute="leading" constant="20" id="qSM-Se-niH"/>
+                            <constraint firstItem="YeU-XZ-2sc" firstAttribute="top" secondItem="AFe-Vj-BSP" secondAttribute="bottom" constant="31" id="sEV-Aa-1KM"/>
+                            <constraint firstItem="YeU-XZ-2sc" firstAttribute="leading" secondItem="KP1-yR-SNi" secondAttribute="leading" constant="20" id="tbg-um-Jih"/>
+                            <constraint firstItem="KP1-yR-SNi" firstAttribute="trailing" secondItem="0xT-qu-kBt" secondAttribute="trailing" constant="138" id="w2L-A1-c3D"/>
+                            <constraint firstItem="KP1-yR-SNi" firstAttribute="trailing" secondItem="AFe-Vj-BSP" secondAttribute="trailing" constant="20" id="zgx-dH-Ohd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KP1-yR-SNi"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KCd-KG-jnd" appends="YES" id="lKi-vT-wPR"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat" image="person.2" catalog="system" id="H14-PH-GZd"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="lBe-Lk-7P7" id="7WJ-2P-85N"/>
+                        <outlet property="passwordTextField" destination="UWd-Se-6FU" id="Xsc-P2-IMe"/>
+                        <outlet property="repeatPasswordTextField" destination="AFe-Vj-BSP" id="P85-zp-ePf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBN-wO-mto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KCd-KG-jnd">
+                    <connections>
+                        <action selector="backgroundTab:" destination="MsG-lw-50i" id="Trs-t3-OL1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-2419" y="460"/>
+            <point key="canvasLocation" x="-2423.1999999999998" y="458.12807881773404"/>
         </scene>
         <!--Compare Items Value-->
         <scene sceneID="nAB-ea-AWz">
@@ -382,7 +462,7 @@
         <!--My Items-->
         <scene sceneID="6bQ-7q-jG2">
             <objects>
-                <viewController id="OUg-Eb-Yd6" customClass="SearchItemViewController" customModule="BuyMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OUg-Eb-Yd6" customClass="SearchItemViewController" customModule="Listah" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NRL-wZ-RaR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,7 +471,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="JTY-kl-AEX" customClass="GroceryItemTableViewCell" customModule="BuyMe" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="JTY-kl-AEX" customClass="GroceryItemTableViewCell" customModule="Listah" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JTY-kl-AEX" id="8U9-hD-Wpg">
@@ -538,7 +618,7 @@
         <!--Add Item View Controller-->
         <scene sceneID="BfV-8K-mkh">
             <objects>
-                <viewController storyboardIdentifier="AddItemVC" id="1BO-CZ-3KS" customClass="AddItemViewController" customModule="BuyMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddItemVC" id="1BO-CZ-3KS" customClass="AddItemViewController" customModule="Listah" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c1X-4m-Xlm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

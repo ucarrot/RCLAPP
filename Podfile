@@ -8,6 +8,16 @@ target 'RCLAPP' do
 pod 'Firebase/Database'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'Firebase/Storage'
+pod 'Firebase/Firestore'
+
+pod 'ProgressHUD' #show notification
+pod 'MBProgressHUD' #loading
+pod 'IQAudioRecorderController'#recording audio msgs
+
+pod 'JSQMessagesViewController', '7.3.3' #for chat porpose
+pod 'IDMPhotoBrowser' #display photo in separete view
+pod 'ImagePicker' #image picker
 
 pod 'SwipeCellKit'
 pod 'KRProgressHUD'

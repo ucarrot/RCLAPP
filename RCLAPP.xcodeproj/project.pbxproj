@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		1525D486212B202D00427042 /* ShoppingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D485212B202D00427042 /* ShoppingItemTableViewCell.swift */; };
 		1525D488212D6CD800427042 /* SwipeTableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D487212D6CD800427042 /* SwipeTableViewHelpers.swift */; };
 		1525D48A212EF47F00427042 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D489212EF47F00427042 /* Camera.swift */; };
+		1594D05B238660DB006B51B8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594D05A238660DB006B51B8 /* WelcomeViewController.swift */; };
+		1594D05D2386A036006B51B8 /* FUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594D05C2386A036006B51B8 /* FUser.swift */; };
+		1594D0612386A2CE006B51B8 /* CollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594D0602386A2CE006B51B8 /* CollectionReference.swift */; };
+		1594D0662386A434006B51B8 /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1594D0652386A434006B51B8 /* Badges.swift */; };
+		1594D0682386A483006B51B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1594D0672386A483006B51B8 /* Localizable.strings */; };
 		15C580E9212479940039AA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C580E8212479940039AA36 /* AppDelegate.swift */; };
 		15C580EE212479940039AA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C580EC212479940039AA36 /* Main.storyboard */; };
 		15C580F3212479960039AA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C580F1212479960039AA36 /* LaunchScreen.storyboard */; };
@@ -34,6 +39,11 @@
 		1525D485212B202D00427042 /* ShoppingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewCell.swift; sourceTree = "<group>"; };
 		1525D487212D6CD800427042 /* SwipeTableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewHelpers.swift; sourceTree = "<group>"; };
 		1525D489212EF47F00427042 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		1594D05A238660DB006B51B8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1594D05C2386A036006B51B8 /* FUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUser.swift; sourceTree = "<group>"; };
+		1594D0602386A2CE006B51B8 /* CollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReference.swift; sourceTree = "<group>"; };
+		1594D0652386A434006B51B8 /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
+		1594D0672386A483006B51B8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../../../../../../Downloads/Localizable.strings; sourceTree = "<group>"; };
 		15C580E5212479940039AA36 /* Listah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Listah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C580E8212479940039AA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15C580ED212479940039AA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +78,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1594D05923866040006B51B8 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				1594D05A238660DB006B51B8 /* WelcomeViewController.swift */,
+				1594D0622386A34A006B51B8 /* Helpers */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		1594D0622386A34A006B51B8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1594D0672386A483006B51B8 /* Localizable.strings */,
+				1594D05C2386A036006B51B8 /* FUser.swift */,
+				1594D0652386A434006B51B8 /* Badges.swift */,
+				1594D0602386A2CE006B51B8 /* CollectionReference.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		15C580DC212479940039AA36 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +119,7 @@
 		15C580E7212479940039AA36 /* RCLAPP */ = {
 			isa = PBXGroup;
 			children = (
+				1594D05923866040006B51B8 /* ChatView */,
 				15C580E8212479940039AA36 /* AppDelegate.swift */,
 				865938F12136FC7A009DF2F4 /* ShoppingView */,
 				1525D4832129D5C400427042 /* AddItemViewController.swift */,
@@ -222,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1594D0682386A483006B51B8 /* Localizable.strings in Resources */,
 				15C580F3212479960039AA36 /* LaunchScreen.storyboard in Resources */,
 				15C580FB2125D88A0039AA36 /* GoogleService-Info.plist in Resources */,
 				15C580FD2125E4F20039AA36 /* Assets.xcassets in Resources */,
@@ -255,29 +287,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -288,11 +307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C5810B21286C210039AA36 /* ListTableViewCell.swift in Sources */,
+				1594D05B238660DB006B51B8 /* WelcomeViewController.swift in Sources */,
 				15C58107212718820039AA36 /* Utilities.swift in Sources */,
+				1594D05D2386A036006B51B8 /* FUser.swift in Sources */,
 				15C581052127154D0039AA36 /* Constants.swift in Sources */,
 				15C5810121270D390039AA36 /* ShoppingItemViewController.swift in Sources */,
 				15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */,
 				865938F32136FCC3009DF2F4 /* SearchItemViewController.swift in Sources */,
+				1594D0662386A434006B51B8 /* Badges.swift in Sources */,
 				1525D4842129D5C400427042 /* AddItemViewController.swift in Sources */,
 				1525D486212B202D00427042 /* ShoppingItemTableViewCell.swift in Sources */,
 				865938F52136FDBB009DF2F4 /* GroceryItemTableViewCell.swift in Sources */,
@@ -302,6 +324,7 @@
 				15C580FF2125F9C00039AA36 /* AllListsViewController.swift in Sources */,
 				868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */,
 				15C580E9212479940039AA36 /* AppDelegate.swift in Sources */,
+				1594D0612386A2CE006B51B8 /* CollectionReference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
