@@ -45,7 +45,7 @@ class ShoppingList {
         //auto id
         let ref = firebase.child(kSHOPPINGLIST).child("1234").childByAutoId()
         
-        shoppingList.id = ref.key
+        shoppingList.id = ref.key!
         
         ref.setValue(dictionaryFromItem(item: shoppingList)) { (error, ref) -> Void in
             completion(error)

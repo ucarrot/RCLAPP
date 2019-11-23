@@ -58,7 +58,7 @@ class GroceryItem {
         //auto id
         let ref = firebase.child(kGROCERYITEM).child("1234").childByAutoId()
         
-            groceryItem.groceryItemId = ref.key
+        groceryItem.groceryItemId = ref.key!
         
         ref.setValue(dictionaryFromItem(item: groceryItem)) { (error, ref) -> Void in
             completion(error)

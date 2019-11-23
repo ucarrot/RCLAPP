@@ -52,7 +52,7 @@ func saveItemInBackground(shoppingItem: ShoppingItem, completion: @escaping (_ e
     //auto id
     let ref = firebase.child(kSHOPPINGITEM).child(shoppingItem.shoppingListId).childByAutoId()
     
-    shoppingItem.shoppingItemId = ref.key
+    shoppingItem.shoppingItemId = ref.key!
     
     ref.setValue(dictionaryFromItem(item: shoppingItem)) { (error, ref) -> Void in
         completion(error)
