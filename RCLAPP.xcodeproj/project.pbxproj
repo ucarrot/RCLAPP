@@ -31,6 +31,7 @@
 		865938F32136FCC3009DF2F4 /* SearchItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */; };
 		865938F52136FDBB009DF2F4 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */; };
 		868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D7D5F23564C9B005CAD93 /* GroceryItem.swift */; };
+		86A9FC8C238AD84100481F5A /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */; };
 		DF685E0BF69066DB1DFB045B /* Pods_RCLAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewController.swift; sourceTree = "<group>"; };
 		865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
 		868D7D5F23564C9B005CAD93 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
+		86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCLAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1594D05A238660DB006B51B8 /* WelcomeViewController.swift */,
+				86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */,
 				1594D0622386A34A006B51B8 /* Helpers */,
 			);
 			path = ChatView;
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A9FC8C238AD84100481F5A /* FinishRegistrationViewController.swift in Sources */,
 				15C5810B21286C210039AA36 /* ListTableViewCell.swift in Sources */,
 				1594D05B238660DB006B51B8 /* WelcomeViewController.swift in Sources */,
 				15C58107212718820039AA36 /* Utilities.swift in Sources */,

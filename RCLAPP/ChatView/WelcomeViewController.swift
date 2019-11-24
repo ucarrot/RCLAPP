@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class WelcomeViewController: UIViewController {
 
@@ -29,21 +30,71 @@ class WelcomeViewController: UIViewController {
     
     //MARK: IBActions
 
-    //login
+    //login -------------------------------------------------
     @IBAction func loginButtonPressed(_ sender: Any) {
         dismissKeyboard()
+        
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            
+            loginUser()
+        }
+        else {
+            
+            ProgressHUD.showError("Email and Password is missing!")
+            
+        }
     }
-    //register
+    //register -------------------------------------------------
     @IBAction func registerButtonPressed(_ sender: Any) {
         dismissKeyboard()
+        
+        if emailTextField.text != "" && passwordTextField.text != "" && repeatPasswordTextField.text != "" {
+            //check if passwords are equal
+            if passwordTextField.text == repeatPasswordTextField.text {
+                registerUser()
+            }else {
+                ProgressHUD.showError("Passwords dont match!")
+            }
+            
+        }
+        else {
+            
+            ProgressHUD.showError("All fields are required!")
+            
+        }
+        
     }
-    //gesture tab
+    //gesture tab -------------------------------------------------
     @IBAction func backgroundTab(_ sender: Any) {
         dismissKeyboard()
     }
     
     //MARK: HelperFunctions
     
+    
+    func loginUser() {
+        
+        ProgressHUD.show("Login..")
+        FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) {(error) in
+            
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            
+            //present the app
+            self.goToApp()
+        }
+    }
+    //register user
+    func registerUser(){
+        //profile segue
+        performSegue(withIdentifier: "WelcomeToFinishReg", sender: self)
+
+        cleanTextFields()
+        dismissKeyboard()
+        
+    }
     func dismissKeyboard(){
         self.view.endEditing(false)
         
@@ -53,5 +104,28 @@ class WelcomeViewController: UIViewController {
         passwordTextField.text = ""
         repeatPasswordTextField.text = ""
         
+    }
+    
+    //MARK: GoToApp
+    
+    func goToApp() {
+        
+        ProgressHUD.dismiss()
+        cleanTextFields()
+        dismissKeyboard()
+        
+        print("show app")
+        //present app
+    }
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // check if it is the correct segue
+        if segue.identifier == "WelcomeToFinishReg" {
+            let vc = segue.destination as! FinishRegistrationViewController
+            vc.email = emailTextField.text!
+            vc.password = passwordTextField.text!
+        }
     }
 }
