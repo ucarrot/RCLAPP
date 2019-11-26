@@ -91,7 +91,7 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         var imageData: String!
         
         if itemImage != nil {
-            let image = UIImageJPEGRepresentation(itemImage!, 0.5)
+            let image = itemImage!.jpegData(compressionQuality: 0.5)
             imageData = image?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
         }else {
             imageData = ""
@@ -125,7 +125,7 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         var imageData: String!
         
         if itemImage != nil {
-            let image = UIImageJPEGRepresentation(itemImage!, 0.5)
+            let image = itemImage!.jpegData(compressionQuality: 0.5)
             imageData = image?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
         } else {
             imageData = ""
@@ -165,8 +165,11 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     }
     //MARK: UIImagePikerController delegate
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        self.itemImage = (info[UIImagePickerControllerEditedImage] as! UIImage)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
+        self.itemImage = (info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)] as! UIImage)
         
         let newImage = itemImage!.scaleImageToSize(newSize: itemImageView.frame.size)
         self.itemImageView.image = newImage.circleMasked
@@ -195,4 +198,14 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         }
     }
    
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

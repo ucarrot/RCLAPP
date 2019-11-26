@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class FinishRegistrationViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class FinishRegistrationViewController: UIViewController {
     
     var email: String!
     var password: String!
-    var avatarImange: UIImage?
+    var avatarImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +32,114 @@ class FinishRegistrationViewController: UIViewController {
     
 
     //MARK: IBActions
-    
+    //cancel button
     @IBAction func cancelButtonPressed(_ sender: Any) {
+        cleanTextFields()
+        dismissKeyboard()
         
+        self.dismiss(animated: true, completion: nil)
         
         
     }
-    
+    //done button
     @IBAction func doneButtonPressed(_ sender: Any) {
+       
+        dismissKeyboard()
+        ProgressHUD.show("Registrering...")
         
+        if nameTextField.text != "" && surnameTextField.text != "" && countryTextField.text != "" && cityTextField.text != "" && phoneTextField.text != "" {
+            //firebase authentication
+            FUser.registerUserWith(email: email!, password: password!, firstName: nameTextField.text! , lastName: surnameTextField.text!) { (error) in
+                
+                if error != nil {
+                    ProgressHUD.dismiss()
+                    ProgressHUD.showError(error!.localizedDescription) //human readable error
+                    return
+                }
+                
+            }
+            self.registerUser()
+        }
+        else {
+            
+        }
     
     }
+    //MARK: Helpers
+    
+    func registerUser() {
+         
+        let fullName = nameTextField.text! + " " + surnameTextField.text!
+        
+        //dictionary
+       var tempDictionary : Dictionary = [kFIRSTNAME : nameTextField.text!, kLASTNAME : surnameTextField.text!, kFULLNAME : fullName, kCOUNTRY: countryTextField.text!
+        , kCITY : cityTextField.text!, kPHONE : phoneTextField.text!] as [String: Any]
+        
+        if avatarImage == nil {
+            
+            imageFromInitials(firstName: nameTextField.text!, lastName: surnameTextField.text!) { (avatarInitials) in
+                
+                let avatarIMG = avatarInitials.pngData() //NOTE: i have replaced jpegData with pngData
+                let avatar = avatarIMG!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+                               
+                tempDictionary[kAVATAR] = avatar
+                               
+                self.finishRegistration(withValues: tempDictionary)
+            }
+            
+        } else {
+            
+            let avatarData = avatarImage?.pngData() //NOTE: i have replaced jpegData with pngData
+            let avatar = avatarData!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+                       
+             tempDictionary[kAVATAR] = avatar
+            
+            //finish registration
+            self.finishRegistration(withValues: tempDictionary)
+        }
+        
+    }
+    //finish registration
+    func finishRegistration(withValues: [String : Any]) {
+        
+        updateCurrentUserInFirestore(withValues: withValues) { (error) in
+            
+            if error != nil {
+                
+                DispatchQueue.main.async {
+                    ProgressHUD.showError(error!.localizedDescription)
+                    print(error!.localizedDescription)
+                }
+                
+                return //if we have an error
+            }
+            
+            ProgressHUD.dismiss()
+            self.goToApp()
+        }
+    }
+    
+    func goToApp() {
+        cleanTextFields()
+        dismissKeyboard()
+        
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainChat") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
+        
+    }
+    
+    func dismissKeyboard(){
+         self.view.endEditing(false)
+         
+     }
+     func cleanTextFields() {
+         nameTextField.text = ""
+         surnameTextField.text = ""
+         countryTextField.text = ""
+         cityTextField.text = ""
+         phoneTextField.text = ""
+         
+     }
     
 }

@@ -23,7 +23,7 @@ class Camera {
     
     func PresentPhotoLibrary(target: UIViewController, canEdit: Bool) {
         
-        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) && !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum) {
+        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) && !UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.savedPhotosAlbum) {
             return
         }
         
@@ -67,7 +67,7 @@ class Camera {
     
     func PresentPhotoCamera(target: UIViewController,  canEdit: Bool) {
         
-        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
             return
         }
         
@@ -82,14 +82,14 @@ class Camera {
                 if (availableTypes as NSArray).contains(type1) {
                     
                     imagePicker.mediaTypes = [type1]
-                    imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+                    imagePicker.sourceType = UIImagePickerController.SourceType.camera
                 }
             }
             if UIImagePickerController.isCameraDeviceAvailable(.rear) {
-                imagePicker.cameraDevice = UIImagePickerControllerCameraDevice.rear
+                imagePicker.cameraDevice = UIImagePickerController.CameraDevice.rear
             }
             else if UIImagePickerController.isCameraDeviceAvailable(.front) {
-                imagePicker.cameraDevice = UIImagePickerControllerCameraDevice.front
+                imagePicker.cameraDevice = UIImagePickerController.CameraDevice.front
             }
         } else {
             //show alert, no camera available
