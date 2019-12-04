@@ -555,7 +555,7 @@
             </objects>
             <point key="canvasLocation" x="-2424.6376811594205" y="1186.6071428571429"/>
         </scene>
-        <!--Item 2-->
+        <!--Settings-->
         <scene sceneID="Puk-mb-W8B">
             <objects>
                 <viewController id="Ybw-ae-grj" sceneMemberID="viewController">
@@ -565,13 +565,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9J5-GZ-ggg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="HLH-J7-Z36"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsFilled" id="HLH-J7-Z36"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i06-Ut-axL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2880" y="1918"/>
         </scene>
-        <!--Item 1-->
+        <!--Call-->
         <scene sceneID="XnK-RS-sAt">
             <objects>
                 <viewController id="BB0-ie-Iy5" sceneMemberID="viewController">
@@ -603,7 +603,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Ch-6i-BRd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="zz7-1i-rnf"/>
+                    <tabBarItem key="tabBarItem" title="Call" image="call" id="zz7-1i-rnf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLB-RC-UGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -998,9 +998,11 @@
         <image name="ChecklistFilled" width="25" height="25"/>
         <image name="Plus" width="25" height="25"/>
         <image name="PlusFilled" width="37.5" height="37.5"/>
+        <image name="SettingsFilled" width="25" height="25"/>
         <image name="ShoppingCartEmpty" width="37.5" height="37.5"/>
         <image name="ShoppingCartFilled" width="25" height="25"/>
         <image name="avatarPlaceholder" width="101" height="101"/>
+        <image name="call" width="30" height="30"/>
         <image name="camera" catalog="system" width="64" height="48"/>
         <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
         <image name="person.2" catalog="system" width="64" height="40"/>

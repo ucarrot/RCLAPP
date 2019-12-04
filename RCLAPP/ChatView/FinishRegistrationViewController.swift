@@ -123,6 +123,8 @@ class FinishRegistrationViewController: UIViewController {
         cleanTextFields()
         dismissKeyboard()
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object:nil, userInfo: [kUSERID : FUser.currentId()])
+        
         let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainChat") as! UITabBarController
         
         self.present(mainView, animated: true, completion: nil)
