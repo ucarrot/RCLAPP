@@ -30,6 +30,7 @@
 		15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5810D21287AA00039AA36 /* ShoppingItem.swift */; };
 		865938F32136FCC3009DF2F4 /* SearchItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */; };
 		865938F52136FDBB009DF2F4 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */; };
+		8685DBA223D9A39600CACF90 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBA123D9A39600CACF90 /* SettingsTableViewController.swift */; };
 		8689EB18238B123E00A3F7E1 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8689EB17238B123E00A3F7E1 /* HelperFunctions.swift */; };
 		868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D7D5F23564C9B005CAD93 /* GroceryItem.swift */; };
 		86A9FC8C238AD84100481F5A /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */; };
@@ -64,6 +65,7 @@
 		68F97D7A6C9DB7256F849B77 /* Pods-RCLAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.release.xcconfig"; sourceTree = "<group>"; };
 		865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewController.swift; sourceTree = "<group>"; };
 		865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
+		8685DBA123D9A39600CACF90 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		8689EB17238B123E00A3F7E1 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperFunctions.swift; path = RCLAPP/Helpers/HelperFunctions.swift; sourceTree = SOURCE_ROOT; };
 		868D7D5F23564C9B005CAD93 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				1594D05A238660DB006B51B8 /* WelcomeViewController.swift */,
 				86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */,
+				8685DBA123D9A39600CACF90 /* SettingsTableViewController.swift */,
 				1594D0622386A34A006B51B8 /* Helpers */,
 			);
 			path = ChatView;
@@ -327,6 +330,7 @@
 				1525D486212B202D00427042 /* ShoppingItemTableViewCell.swift in Sources */,
 				865938F52136FDBB009DF2F4 /* GroceryItemTableViewCell.swift in Sources */,
 				1525D488212D6CD800427042 /* SwipeTableViewHelpers.swift in Sources */,
+				8685DBA223D9A39600CACF90 /* SettingsTableViewController.swift in Sources */,
 				8689EB18238B123E00A3F7E1 /* HelperFunctions.swift in Sources */,
 				1525D48A212EF47F00427042 /* Camera.swift in Sources */,
 				15C58103212712BA0039AA36 /* ShoppingList.swift in Sources */,
