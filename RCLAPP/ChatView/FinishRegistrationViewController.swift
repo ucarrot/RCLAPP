@@ -45,7 +45,7 @@ class FinishRegistrationViewController: UIViewController {
     @IBAction func doneButtonPressed(_ sender: Any) {
        
         dismissKeyboard()
-        ProgressHUD.show("Registrering...")
+        ProgressHUD.show("Registering...")
         
         if nameTextField.text != "" && surnameTextField.text != "" && countryTextField.text != "" && cityTextField.text != "" && phoneTextField.text != "" {
             //firebase authentication
