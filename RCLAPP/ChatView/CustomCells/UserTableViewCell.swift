@@ -8,12 +8,18 @@
 
 import UIKit
 
+//custom created protocol to display prfileview
+protocol UserTableViewCellDelegate {
+    func didTapAvatarImage(indexPath: IndexPath)
+}
+
 class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     
     var indexPath: IndexPath!
+    var delegate: UserTableViewCellDelegate?
     
     let tapGestureRecognizer = UITapGestureRecognizer()
     
@@ -49,8 +55,9 @@ class UserTableViewCell: UITableViewCell {
     }
     
     @objc func avatarTap() {
-        print("avatar tap at \(indexPath)")
-
+        
+        delegate!.didTapAvatarImage(indexPath: indexPath)
+        
     }
 
 }
