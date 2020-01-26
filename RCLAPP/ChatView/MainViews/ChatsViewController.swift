@@ -87,6 +87,53 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    //MARK: TableViewDelegate functions
+    //mute button and delete button
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        var tempRecent: NSDictionary!
+        
+        if searchController.isActive && searchController.searchBar.text != "" {
+            tempRecent = filteredChats[indexPath.row]
+        }else {
+            tempRecent = recentChats[indexPath.row]
+        }
+        
+        var muteTitle = "Unmute"
+        var mute = false
+        
+        //is recent is mute?
+        if (tempRecent[kMEMBERSTOPUSH] as! [String]).contains(FUser.currentId()) {
+            
+            muteTitle = "Mute"
+            mute = true
+        }
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { (action, indexPath) in
+            
+            self.recentChats.remove(at: indexPath.row)
+            
+            deleteRecentChat(recentChatDictionary: tempRecent)
+            
+            self.tableView.reloadData()
+
+        }
+        
+        let muteAction = UITableViewRowAction(style: .default, title: muteTitle) { (action, indexPath) in
+            
+            print("mute \(indexPath)")
+            
+        }
+        
+        muteAction.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        
+        return [deleteAction, muteAction]
+    }
+    
     //MARK: LoadRecentChats
     
     func loadRecentChats() {
