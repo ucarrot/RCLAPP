@@ -930,7 +930,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLB-RC-UGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3023.1884057971015" y="1917.8571428571427"/>
+            <point key="canvasLocation" x="-3444" y="1917"/>
+        </scene>
+        <!--Messages View Controller-->
+        <scene sceneID="8Gp-sJ-cA2">
+            <objects>
+                <viewController id="bSr-Sy-DFj" customClass="JSQMessagesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hze-rM-SOw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mri-FB-n53"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShX-Qw-K6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2734" y="1917"/>
         </scene>
         <!--Settings-->
         <scene sceneID="rJD-7U-Ebf">
@@ -1416,7 +1431,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lp-BB-pBX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3771.0144927536235" y="1917.8571428571427"/>
+            <point key="canvasLocation" x="-4225" y="1917"/>
         </scene>
     </scenes>
     <resources>
