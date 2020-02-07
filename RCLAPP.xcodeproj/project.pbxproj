@@ -39,6 +39,7 @@
 		8685DBB223DC484E00CACF90 /* RecentChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBB123DC484E00CACF90 /* RecentChatsTableViewCell.swift */; };
 		8685DBB423E0A69400CACF90 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBB323E0A69400CACF90 /* ChatViewController.swift */; };
 		8685DBB623E53CBB00CACF90 /* OutgoingMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBB523E53CBB00CACF90 /* OutgoingMessages.swift */; };
+		8685DBB923E5A93800CACF90 /* IncomingMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBB823E5A93800CACF90 /* IncomingMessages.swift */; };
 		8689EB18238B123E00A3F7E1 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8689EB17238B123E00A3F7E1 /* HelperFunctions.swift */; };
 		868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D7D5F23564C9B005CAD93 /* GroceryItem.swift */; };
 		86A9FC8C238AD84100481F5A /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */; };
@@ -82,6 +83,7 @@
 		8685DBB123DC484E00CACF90 /* RecentChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatsTableViewCell.swift; sourceTree = "<group>"; };
 		8685DBB323E0A69400CACF90 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8685DBB523E53CBB00CACF90 /* OutgoingMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessages.swift; sourceTree = "<group>"; };
+		8685DBB823E5A93800CACF90 /* IncomingMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessages.swift; sourceTree = "<group>"; };
 		8689EB17238B123E00A3F7E1 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperFunctions.swift; path = RCLAPP/Helpers/HelperFunctions.swift; sourceTree = SOURCE_ROOT; };
 		868D7D5F23564C9B005CAD93 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
 		86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				1594D05C2386A036006B51B8 /* FUser.swift */,
 				8685DBAF23DC2D8500CACF90 /* Recent.swift */,
 				8685DBB523E53CBB00CACF90 /* OutgoingMessages.swift */,
+				8685DBB823E5A93800CACF90 /* IncomingMessages.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			files = (
 				8685DBB223DC484E00CACF90 /* RecentChatsTableViewCell.swift in Sources */,
 				86A9FC8C238AD84100481F5A /* FinishRegistrationViewController.swift in Sources */,
+				8685DBB923E5A93800CACF90 /* IncomingMessages.swift in Sources */,
 				8685DBA423D9DD2800CACF90 /* UserTableViewCell.swift in Sources */,
 				8685DBA723D9E82D00CACF90 /* UsersTableViewController.swift in Sources */,
 				15C5810B21286C210039AA36 /* ListTableViewCell.swift in Sources */,

@@ -151,10 +151,11 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //show chat view
         let chatVC = ChatViewController()
         chatVC.hidesBottomBarWhenPushed = true
-        chatVC.titleName = (recent[kWITHUSERUSERNAME] as? String)!
+        chatVC.titleName = (recent[kWITHUSERFULLNAME] as? String)!
         chatVC.memberIds = (recent[kMEMBERS] as? [String])! //array of strings
         chatVC.membersToPush = (recent[kMEMBERSTOPUSH] as? [String])! //array of strings
         chatVC.chatRoomId = (recent[kCHATROOMID] as? String)!
+        chatVC.isGroup = (recent[kTYPE] as! String) == kGROUP
         
         navigationController?.pushViewController(chatVC, animated: true)
         
