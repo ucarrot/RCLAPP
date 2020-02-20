@@ -73,8 +73,14 @@ class ChatViewController: JSQMessagesViewController {
         subTitle.font = UIFont(name: subTitle.font.fontName, size: 10)
         return subTitle
     }()
-    
-    
+    //clean recent counter
+    override func viewWillAppear(_ animated: Bool) {
+        clearRecentCounter(chatRoomId: chatRoomId)
+    }
+    //clean recent counter
+    override func viewWillDisappear(_ animated: Bool) {
+        clearRecentCounter(chatRoomId: chatRoomId)
+    }
     //fix for iphone x part 1/2
     override func viewDidLayoutSubviews() {
         
@@ -84,6 +90,8 @@ class ChatViewController: JSQMessagesViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //text delete
+        JSQMessagesCollectionViewCell.registerMenuAction(#selector(delete))
         
         navigationItem.largeTitleDisplayMode = .never
         
@@ -291,6 +299,42 @@ class ChatViewController: JSQMessagesViewController {
         //load more messages
         self.loadMoreMessages(maxNumber: maxMessageNumber, minNumber: minMessageNumber)
         self.collectionView.reloadData()
+    }
+    
+    //for multimedia msgs delete option
+    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+        
+        super.collectionView(collectionView, shouldShowMenuForItemAt: indexPath)
+        return true
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        
+        if messages[indexPath.row].isMediaMessage {
+            if action.description == "delete" {
+                
+                return true
+            } else {
+                return false
+            }
+        } else {
+            if action.description == "delete:" || action.description == "copy:" {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView!, didDeleteMessageAt indexPath: IndexPath!) {
+        
+        let messageId = objectMessages[indexPath.row][kMESSAGEID] as! String
+        
+        objectMessages.remove(at: indexPath.row)
+        messages.remove(at: indexPath.row)
+        
+        //delete msg from firebase
+        OutgoingMessage.deleteMessage(withId: messageId, chatRoomId: chatRoomId)
     }
     
     //MARK: Send Messages
@@ -501,6 +545,8 @@ class ChatViewController: JSQMessagesViewController {
     
     //MARK: IBActions
     @objc func backAction() {
+        
+        clearRecentCounter(chatRoomId: chatRoomId)
         self.navigationController?.popViewController(animated: true)
     }
     @objc func infoButtonPressed() {
