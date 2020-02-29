@@ -10,9 +10,7 @@ import UIKit
 import SwipeCellKit
 import KRProgressHUD
 
-class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate {
-
-    
+class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate, SearchItemViewControllerDelegate {
     
     @IBOutlet weak var totalPriceLabel: UILabel!
     @IBOutlet weak var itemsLeftLabel: UILabel!
@@ -125,12 +123,20 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddItemVC") as! AddItemViewController
             
             vc.shoppingList = self.shoppingList
+            vc.addingToList = false
+            
             self.present(vc, animated: true, completion: nil)
         }
         
         let searchItemAction = UIAlertAction(title: "Search Item", style: .default) { (action) in
+            //display search view
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchVC") as! SearchItemViewController
             
-          
+            vc.delegate = self
+            vc.clickToEdit = false
+            
+            self.present(vc, animated: true, completion: nil)
+
             
         }
         
@@ -290,5 +296,22 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
         return view
     }
     
+    //MARK: SearchItemViewControllerDelegate
+    
+    func didChooseItem(groceryItem: GroceryItem) {
+        //print("did choose item \(groceryItem.name)")
+        
+        let shoppingItem = ShoppingItem(groceryItem: groceryItem)
+        shoppingItem.shoppingListId = shoppingList.id
+        
+        shoppingItem.saveItemInBackground(shoppingItem: shoppingItem) { (error) in
+            
+            if error != nil {
+                
+                KRProgressHUD.showError(withMessage: "Error choosing item")
+                return
+            }
+        }
+    }
 
 }

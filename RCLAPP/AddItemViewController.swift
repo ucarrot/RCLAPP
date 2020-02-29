@@ -18,8 +18,10 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     @IBOutlet weak var extraInfoTextField: UITextField!
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
+    
     var shoppingList : ShoppingList!
     var shoppingItem : ShoppingItem?
+    var groceryItem : GroceryItem?
     
     var addingToList: Bool?
     
@@ -31,7 +33,7 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         let image = UIImage(named: "ShoppingCartEmpty")!.scaleImageToSize(newSize: itemImageView.frame.size)
         itemImageView.image = image.circleMasked
         
-        if shoppingItem != nil {
+        if shoppingItem != nil || groceryItem != nil {
             updateUI()
         }
     }
@@ -69,8 +71,10 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
     @IBAction func saveButtonPressed(_ sender: Any) {
             //check if the item details is empty
         if nameTextField.text != "" && priceTextField.text != "" {
-            if shoppingItem != nil {
+            if shoppingItem != nil || groceryItem != nil {
+                
                 self.updateItem()
+                
             }else {
                 saveItem()
             }
@@ -79,7 +83,6 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
         else {
             KRProgressHUD.showWarning(withMessage: "Empty Fields!")
         }
-        self.dismiss(animated: true, completion: nil)
     }
      //dismiss if cancel
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -114,8 +117,21 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
                 }
             })
             
-        }else {
+        }else if groceryItem != nil {
             //update grocery item
+            
+            groceryItem!.name = nameTextField.text!
+            groceryItem!.info = extraInfoTextField.text!
+            groceryItem!.price = Float(priceTextField.text!)!
+            
+            groceryItem!.image = imageData
+            
+            groceryItem!.updateItemInBackground(groceryItem: groceryItem!) { (error) in
+                if error != nil {
+                    KRProgressHUD.showError(withMessage: "Error updating grocery item")
+                }
+            }
+            
         }
     }
     func saveItem() {
@@ -146,6 +162,7 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
                 return
                 }
             })
+            
             self.dismiss(animated: true, completion: nil)
             
         }else {
@@ -160,8 +177,41 @@ class AddItemViewController: UIViewController,UINavigationControllerDelegate,UII
                 }
                 
             }
+            
+            showListNotification(shoppingItem: shoppingItem)
         }
   
+    }
+    
+    func showListNotification(shoppingItem: ShoppingItem) {
+        
+        let alertController = UIAlertController (title: "Shopping Items", message: "Add this to your Favourite item List ?", preferredStyle: .alert)
+        
+        let noAction = UIAlertAction(title: "No", style: .cancel) { (action) in
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
+            
+            //save to grocery list
+            let groceryItem = GroceryItem(shoppingItem: shoppingItem)
+            
+            groceryItem.saveItemInBackground(groceryItem: groceryItem, completion: { (error) in
+                
+                if error != nil {
+                    KRProgressHUD.showError(withMessage: "Error creating grocery item")
+                }
+            })
+            
+            self.dismiss(animated: true, completion: nil)
+
+            
+        }
+        
+        alertController.addAction(noAction)
+        alertController.addAction(yesAction)
+        self.present(alertController, animated: true , completion: nil)
     }
     //MARK: UIImagePikerController delegate
     
@@ -188,6 +238,23 @@ let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
             
             if shoppingItem!.image != "" {
                 imageFromData(pictureData: shoppingItem!.image, withBlock: {(image) in
+                    
+                    self.itemImage = image!
+                    let newImage = image!.scaleImageToSize(newSize: itemImageView.frame.size)
+                    self.itemImageView.image = newImage.circleMasked
+                    
+                })
+            }
+        } else if groceryItem != nil {
+            
+            //grocery item
+            self.nameTextField.text = self.groceryItem!.name
+            self.extraInfoTextField.text = self.groceryItem!.info
+            self.quantityTextField.text = ""
+            self.priceTextField.text = "\(self.groceryItem!.price)"
+            
+            if groceryItem!.image != "" {
+                imageFromData(pictureData: groceryItem!.image, withBlock: {(image) in
                     
                     self.itemImage = image!
                     let newImage = image!.scaleImageToSize(newSize: itemImageView.frame.size)

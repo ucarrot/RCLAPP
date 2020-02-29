@@ -147,6 +147,7 @@
 		15C580E7212479940039AA36 /* RCLAPP */ = {
 			isa = PBXGroup;
 			children = (
+				8689A11024095C8500A23542 /* CaptureOCRView */,
 				1594D05923866040006B51B8 /* ChatView */,
 				15C580E8212479940039AA36 /* AppDelegate.swift */,
 				865938F12136FC7A009DF2F4 /* ShoppingView */,
@@ -267,6 +268,13 @@
 				8685DBB823E5A93800CACF90 /* IncomingMessages.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		8689A11024095C8500A23542 /* CaptureOCRView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CaptureOCRView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

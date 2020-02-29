@@ -33,16 +33,28 @@ var image: String
         
 }
 //we recieve a dictionary from firebase (section 3 , lecture 6)
-init(dictionary:NSDictionary) {
-    name = dictionary[kNAME] as! String
-    info = dictionary[kINFO] as! String
-    quantity = dictionary[kQUANTITY] as! String
-    price = dictionary[kPRICE] as! Float
-    shoppingItemId = dictionary[kSHOPPINGITEMID] as! String
-    shoppingListId = dictionary[kSHOPPINGLISTID] as! String
-    isBought = dictionary[kISBOUGHT] as! Bool
-    image = dictionary[kIMAGE] as! String
+    init(dictionary:NSDictionary) {
+        name = dictionary[kNAME] as! String
+        info = dictionary[kINFO] as! String
+        quantity = dictionary[kQUANTITY] as! String
+        price = dictionary[kPRICE] as! Float
+        shoppingItemId = dictionary[kSHOPPINGITEMID] as! String
+        shoppingListId = dictionary[kSHOPPINGLISTID] as! String
+        isBought = dictionary[kISBOUGHT] as! Bool
+        image = dictionary[kIMAGE] as! String
 }
+    init(groceryItem: GroceryItem){
+           
+        name = groceryItem.name
+        info = groceryItem.info
+        price = groceryItem.price
+        image = groceryItem.image
+        quantity = "1"
+        shoppingItemId = ""
+        shoppingListId = ""
+        isBought = false
+       }
+    
 func dictionaryFromItem(item: ShoppingItem) -> NSDictionary {
     
     return NSDictionary(objects: [item.name,item.info,item.quantity,item.price,item.shoppingItemId,item.shoppingListId,item.isBought,item.image], forKeys: [kNAME as NSCopying,kINFO as NSCopying,kQUANTITY as NSCopying,kPRICE as NSCopying, kSHOPPINGITEMID as NSCopying, kSHOPPINGLISTID as NSCopying,kISBOUGHT as NSCopying,kIMAGE as NSCopying])
