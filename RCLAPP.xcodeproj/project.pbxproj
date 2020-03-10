@@ -42,6 +42,10 @@
 		8685DBB923E5A93800CACF90 /* IncomingMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBB823E5A93800CACF90 /* IncomingMessages.swift */; };
 		8689EB18238B123E00A3F7E1 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8689EB17238B123E00A3F7E1 /* HelperFunctions.swift */; };
 		868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D7D5F23564C9B005CAD93 /* GroceryItem.swift */; };
+		868FDB30241540CB0000CEF1 /* SettingsShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868FDB2F241540CB0000CEF1 /* SettingsShoppingListViewController.swift */; };
+		868FDB3224163B990000CEF1 /* LoginToListahViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868FDB3124163B990000CEF1 /* LoginToListahViewController.swift */; };
+		868FDB3424163BB80000CEF1 /* SignUpToListahViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868FDB3324163BB80000CEF1 /* SignUpToListahViewController.swift */; };
+		868FDB3724163FE60000CEF1 /* FUserOnListah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868FDB3624163FE60000CEF1 /* FUserOnListah.swift */; };
 		86A9FC8C238AD84100481F5A /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */; };
 		DF685E0BF69066DB1DFB045B /* Pods_RCLAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +90,10 @@
 		8685DBB823E5A93800CACF90 /* IncomingMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessages.swift; sourceTree = "<group>"; };
 		8689EB17238B123E00A3F7E1 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperFunctions.swift; path = RCLAPP/Helpers/HelperFunctions.swift; sourceTree = SOURCE_ROOT; };
 		868D7D5F23564C9B005CAD93 /* GroceryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItem.swift; sourceTree = "<group>"; };
+		868FDB2F241540CB0000CEF1 /* SettingsShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsShoppingListViewController.swift; sourceTree = "<group>"; };
+		868FDB3124163B990000CEF1 /* LoginToListahViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginToListahViewController.swift; sourceTree = "<group>"; };
+		868FDB3324163BB80000CEF1 /* SignUpToListahViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpToListahViewController.swift; sourceTree = "<group>"; };
+		868FDB3624163FE60000CEF1 /* FUserOnListah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserOnListah.swift; sourceTree = "<group>"; };
 		86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCLAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -153,6 +161,8 @@
 				865938F12136FC7A009DF2F4 /* ShoppingView */,
 				1525D4832129D5C400427042 /* AddItemViewController.swift */,
 				865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */,
+				868FDB2F241540CB0000CEF1 /* SettingsShoppingListViewController.swift */,
+				868FDB3524163BC90000CEF1 /* WelcomToListahView */,
 				15C5810C212878BE0039AA36 /* CustomCell */,
 				15C581082127364E0039AA36 /* Model */,
 				15C581092127365A0039AA36 /* Helpers */,
@@ -171,6 +181,7 @@
 				15C58102212712BA0039AA36 /* ShoppingList.swift */,
 				15C5810D21287AA00039AA36 /* ShoppingItem.swift */,
 				868D7D5F23564C9B005CAD93 /* GroceryItem.swift */,
+				868FDB3624163FE60000CEF1 /* FUserOnListah.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +286,15 @@
 			children = (
 			);
 			path = CaptureOCRView;
+			sourceTree = "<group>";
+		};
+		868FDB3524163BC90000CEF1 /* WelcomToListahView */ = {
+			isa = PBXGroup;
+			children = (
+				868FDB3124163B990000CEF1 /* LoginToListahViewController.swift */,
+				868FDB3324163BB80000CEF1 /* SignUpToListahViewController.swift */,
+			);
+			path = WelcomToListahView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +423,7 @@
 				15C581052127154D0039AA36 /* Constants.swift in Sources */,
 				15C5810121270D390039AA36 /* ShoppingItemViewController.swift in Sources */,
 				15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */,
+				868FDB3424163BB80000CEF1 /* SignUpToListahViewController.swift in Sources */,
 				865938F32136FCC3009DF2F4 /* SearchItemViewController.swift in Sources */,
 				1594D0662386A434006B51B8 /* Badges.swift in Sources */,
 				1525D4842129D5C400427042 /* AddItemViewController.swift in Sources */,
@@ -414,7 +435,10 @@
 				8685DBA223D9A39600CACF90 /* SettingsTableViewController.swift in Sources */,
 				8685DBA923D9F3A700CACF90 /* ChatsViewController.swift in Sources */,
 				8689EB18238B123E00A3F7E1 /* HelperFunctions.swift in Sources */,
+				868FDB30241540CB0000CEF1 /* SettingsShoppingListViewController.swift in Sources */,
 				1525D48A212EF47F00427042 /* Camera.swift in Sources */,
+				868FDB3224163B990000CEF1 /* LoginToListahViewController.swift in Sources */,
+				868FDB3724163FE60000CEF1 /* FUserOnListah.swift in Sources */,
 				15C58103212712BA0039AA36 /* ShoppingList.swift in Sources */,
 				15C580FF2125F9C00039AA36 /* AllListsViewController.swift in Sources */,
 				868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */,

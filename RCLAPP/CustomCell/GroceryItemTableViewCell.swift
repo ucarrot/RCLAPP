@@ -25,9 +25,11 @@ class GroceryItemTableViewCell: ShoppingItemTableViewCell {
 
     func bindData(item: GroceryItem) {
         
+        let currency = userDefaults.value(forKey: kCURRENCY) as! String
+        
         self.nameLabel.text = item.name
         self.extraInfoLabel.text = item.info
-        self.priceLabel.text = "AED \(String(format: "%.2f", item.price))"
+        self.priceLabel.text = "\(currency) \(String(format: "%.2f", item.price))"
         
         if item.image != "" {
             imageFromData(pictureData: item.image, withBlock: { (image) in

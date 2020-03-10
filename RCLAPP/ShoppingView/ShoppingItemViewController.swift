@@ -25,12 +25,14 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
     var defaultOptions = SwipeTableOptions()
     var isSwipeRightEnabled = true
     
-    var totalPrice: Float!
+    var totalPrice: Float! // this sign -> ! <- means we promise to set a value. most errors comes from promised variables.
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        totalPrice = shoppingList.totalPrice
         loadShoppingItems()
+        updateUI()
     }
 
     //MARK: TableView Data Source
@@ -184,8 +186,11 @@ class ShoppingItemViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func updateUI() {
+        
+        let currency = userDefaults.value(forKey: kCURRENCY) as! String
+        
         self.itemsLeftLabel.text = "Items Left: \(self.shoppingItems.count)"
-        self.totalPriceLabel.text = "Total Price: AED\(String (format: "%0.2f", self.totalPrice!))"
+        self.totalPriceLabel.text = "Total Price: \(currency) \(String (format: "%0.2f", self.totalPrice!))"
         
         self.tableView.reloadData()
     }

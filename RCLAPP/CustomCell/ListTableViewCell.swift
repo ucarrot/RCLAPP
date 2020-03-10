@@ -26,6 +26,8 @@ class ListTableViewCell: UITableViewCell {
     
     func binData(item: ShoppingList) {
         
+        let currency = "Dhs"//userDefaults.value(forKey: kCURRENCY) as! String
+        
         let currentDateFormatter = dateFormatter()
         currentDateFormatter.dateFormat = "dd/MM/YYYY"
         
@@ -33,7 +35,7 @@ class ListTableViewCell: UITableViewCell {
         
         self.nameLabel.text = item.name
         self.totalItemsLabel.text = "\(item.totalItems) Items"
-        self.totalPriceLabel.text = "Total AED \(String(format:"%0.2f", item.totalPrice))"
+        self.totalPriceLabel.text = "Total \(currency) \(String(format:"%0.2f", item.totalPrice))"
         self.dateLabel.text = date
         
         self.totalPriceLabel.sizeToFit()

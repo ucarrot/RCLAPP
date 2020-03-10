@@ -34,6 +34,10 @@ class SearchItemViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var clickToEdit = true
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        self.tableView.setContentOffset(CGPoint(x: 0.0, y: 44.0), animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,7 +138,7 @@ class SearchItemViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func loadGroceryItems() {
         
-        firebase.child(kGROCERYITEM).child("1234").observe(.value, with: {
+        firebase.child(kGROCERYITEM).child(FUserOnListah.currentId()).observe(.value, with: {
             snapshot in
             
             self.groceryItems.removeAll()

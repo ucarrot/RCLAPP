@@ -20,6 +20,7 @@ class AllListsViewController: UIViewController,UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        KRProgressHUD.dismiss()
         loadLists()
 
     }
@@ -83,7 +84,7 @@ class AllListsViewController: UIViewController,UITableViewDataSource,UITableView
     
     func loadLists() {
         
-        firebase.child(kSHOPPINGLIST).child("1234").observe(.value, with: { snapshot in
+        firebase.child(kSHOPPINGLIST).child(FUserOnListah.currentId()).observe(.value, with: { snapshot in
             //clear list
             self.allLists.removeAll()
             //check if exsist

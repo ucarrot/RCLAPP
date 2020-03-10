@@ -34,10 +34,12 @@ class ShoppingItemTableViewCell: SwipeTableViewCell {
     //shopping item class
     func bindData(item: ShoppingItem) {
         
+        let currency = userDefaults.value(forKey: kCURRENCY) as! String
+        
         self.nameLabel.text = item.name
         self.extraInfoLabel.text = item.info
         self.quantityLabel.text = item.quantity
-        self.priceLabel.text = "AED \(String(format: "%.2f", item.price))"
+        self.priceLabel.text = "\(currency) \(String(format: "%.2f", item.price))"
         
         self.priceLabel.sizeToFit()
         self.extraInfoLabel.sizeToFit()
