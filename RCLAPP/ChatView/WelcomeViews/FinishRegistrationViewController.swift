@@ -27,7 +27,7 @@ class FinishRegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(email, password)
+        //print(email, password)
     }
     
 

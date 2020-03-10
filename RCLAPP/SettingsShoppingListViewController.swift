@@ -46,6 +46,17 @@ class SettingsShoppingListViewController: UIViewController, UIPickerViewDelegate
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
         
+        FUserOnListah.logOutCurrentUser { (success) in
+            
+            if success! {
+                
+                cleanupFirebaseObservers()
+                
+                let loginView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcomeToListaView")
+                
+                self.present(loginView, animated: true, completion: nil)
+            }
+        } 
         
     }
     

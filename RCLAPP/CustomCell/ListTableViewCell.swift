@@ -26,7 +26,7 @@ class ListTableViewCell: UITableViewCell {
     
     func binData(item: ShoppingList) {
         
-        let currency = "Dhs"//userDefaults.value(forKey: kCURRENCY) as! String
+        let currency = userDefaults.value(forKey: kCURRENCY) as! String
         
         let currentDateFormatter = dateFormatter()
         currentDateFormatter.dateFormat = "dd/MM/YYYY"
