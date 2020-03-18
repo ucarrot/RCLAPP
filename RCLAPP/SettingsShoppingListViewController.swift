@@ -45,10 +45,10 @@ class SettingsShoppingListViewController: UIViewController, UIPickerViewDelegate
     }
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
-        
-        FUserOnListah.logOutCurrentUser { (success) in
+        //FUserOnListah
+        FUser.logOutCurrentUser { (success) in
             
-            if success! {
+            if success {
                 
                 cleanupFirebaseObservers()
                 

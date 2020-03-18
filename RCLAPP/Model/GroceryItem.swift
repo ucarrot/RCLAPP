@@ -22,7 +22,7 @@ class GroceryItem {
         name = _name
         info = _info
         price = _price
-        ownerId = FUserOnListah.currentId()
+        ownerId = FUser.currentId()//FUserOnListah
         image = _image
         groceryItemId = ""
     }
@@ -41,7 +41,7 @@ class GroceryItem {
         name = shoppingItem.name
         info = shoppingItem.info
         price = shoppingItem.price
-        ownerId = FUserOnListah.currentId()
+        ownerId = FUser.currentId()
         image = shoppingItem.image
         groceryItemId = ""
     }
@@ -56,7 +56,7 @@ class GroceryItem {
     //save items
     func saveItemInBackground(groceryItem: GroceryItem, completion: @escaping (_ error: Error?) -> Void) {
         //auto id
-        let ref = firebase.child(kGROCERYITEM).child(FUserOnListah.currentId()).childByAutoId()
+        let ref = firebase.child(kGROCERYITEM).child(FUser.currentId()).childByAutoId()
         
         groceryItem.groceryItemId = ref.key!
         
@@ -66,7 +66,7 @@ class GroceryItem {
     }
         //update items
         func updateItemInBackground(groceryItem: GroceryItem, completion: @escaping (_ error: Error?) -> Void) {
-            let ref = firebase.child(kGROCERYITEM).child(FUserOnListah.currentId()).child(groceryItem.groceryItemId)
+            let ref = firebase.child(kGROCERYITEM).child(FUser.currentId()).child(groceryItem.groceryItemId)
             ref.setValue(dictionaryFromItem(item: groceryItem)) {
                 error, ref in
                 
@@ -77,7 +77,7 @@ class GroceryItem {
         
     //delete items
     func deleteItemInBackground(groceryItem: GroceryItem) {
-        let ref = firebase.child(kGROCERYITEM).child(FUserOnListah.currentId()).child(groceryItem.groceryItemId)
+        let ref = firebase.child(kGROCERYITEM).child(FUser.currentId()).child(groceryItem.groceryItemId)
         ref.removeValue()
     }
 }

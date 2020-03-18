@@ -313,7 +313,7 @@ class FUser {
 func saveUserToFirestore(fUser: FUser) {
     reference(.User).document(fUser.objectId).setData(userDictionaryFrom(user: fUser) as! [String : Any]) { (error) in
         
-        print("error is \(error?.localizedDescription)")
+        print("error is \(error?.localizedDescription ?? "while saving")")
     }
 }
 
@@ -337,7 +337,7 @@ func fetchCurrentUserFromFirestore(userId: String) {
         if snapshot.exists {
             print("updated current users param")
             
-            UserDefaults.standard.setValue(snapshot.data() as! NSDictionary, forKeyPath: kCURRENTUSER)
+            UserDefaults.standard.setValue(snapshot.data()! as NSDictionary, forKeyPath: kCURRENTUSER)
             UserDefaults.standard.synchronize()
             
         }
@@ -390,7 +390,7 @@ func getUsersFromFirestore(withIds: [String], completion: @escaping (_ usersArra
             
             if snapshot.exists {
                 
-                let user = FUser(_dictionary: snapshot.data() as! NSDictionary)
+                let user = FUser(_dictionary: snapshot.data()! as NSDictionary)
                 count += 1
                 
                 //dont add if its current user
@@ -488,3 +488,12 @@ func updateCurrentUserOneSignalId(newId: String) {
 func checkBlockedStatus(withUser: FUser) -> Bool {
     return withUser.blockedUsers.contains(FUser.currentId())
 }
+
+//clean up
+/*func cleanupFirebaseObservers() {
+    
+    firebase.child(kUSER).removeAllObservers()
+    firebase.child(kSHOPPINGLIST).removeAllObservers()
+    firebase.child(kSHOPPINGITEM).removeAllObservers()
+    firebase.child(kGROCERYITEM).removeAllObservers()
+}*/

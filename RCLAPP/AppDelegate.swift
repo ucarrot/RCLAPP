@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //look for google services 
         FirebaseApp.configure()
         //this helps to keep data when app offline , then syncronize with firebase when online.
         Database.database().isPersistenceEnabled = true

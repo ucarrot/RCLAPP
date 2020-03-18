@@ -137,8 +137,8 @@ class SearchItemViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: Load grocery Itemes
     
     func loadGroceryItems() {
-        
-        firebase.child(kGROCERYITEM).child(FUserOnListah.currentId()).observe(.value, with: {
+        //FUserOnListah
+        firebase.child(kGROCERYITEM).child(FUser.currentId()).observe(.value, with: {
             snapshot in
             
             self.groceryItems.removeAll()

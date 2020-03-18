@@ -95,7 +95,6 @@ class RecentChatsTableViewCell: UITableViewCell {
     
     @objc func avatarTap() {
         
-        print("avatar tap \(indexPath)")
         delegate?.didTapAvatarImage(indexPath: indexPath)
     }
 

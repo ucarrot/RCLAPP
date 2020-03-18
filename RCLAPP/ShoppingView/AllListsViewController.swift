@@ -83,8 +83,9 @@ class AllListsViewController: UIViewController,UITableViewDataSource,UITableView
     //MARK: LoadList
     
     func loadLists() {
-        
-        firebase.child(kSHOPPINGLIST).child(FUserOnListah.currentId()).observe(.value, with: { snapshot in
+        //FUserOnListah
+        firebase.child(kSHOPPINGLIST).child(FUser.currentId()).observe(.value, with: {
+            snapshot in
             //clear list
             self.allLists.removeAll()
             //check if exsist

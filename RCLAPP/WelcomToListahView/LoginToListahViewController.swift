@@ -30,6 +30,8 @@ class LoginToListahViewController: UIViewController {
         signUpButtonOutlet.layer.borderWidth = 0.2
         signUpButtonOutlet.layer.borderColor = UIColor.brown.cgColor
       
+        KRProgressHUD.dismiss()
+        
         
     }
     
@@ -42,8 +44,8 @@ class LoginToListahViewController: UIViewController {
         if emailTextField.text != "" && passwordTextField.text != "" {
             
             KRProgressHUD.showMessage("Signing in...")
-            
-            FUserOnListah.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
+            //FUserOnListah
+            FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
                 
                 if error != nil {
                     

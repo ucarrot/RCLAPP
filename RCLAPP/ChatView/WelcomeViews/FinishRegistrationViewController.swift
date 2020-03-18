@@ -17,6 +17,8 @@ class FinishRegistrationViewController: UIViewController {
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var avatarImageView: UIImageView!
     
@@ -46,10 +48,12 @@ class FinishRegistrationViewController: UIViewController {
        
         dismissKeyboard()
         ProgressHUD.show("Registering...")
+        cityTextField.text = "Abu Dhabi"
+        countryTextField.text = "United Arab Emirates"
         
-        if nameTextField.text != "" && surnameTextField.text != "" && countryTextField.text != "" && cityTextField.text != "" && phoneTextField.text != "" {
+        if emailTextField.text != "" && passwordTextField.text != "" && nameTextField.text != "" && surnameTextField.text != "" && countryTextField.text != "" && cityTextField.text != "" && phoneTextField.text != "" {
             //firebase authentication
-            FUser.registerUserWith(email: email!, password: password!, firstName: nameTextField.text! , lastName: surnameTextField.text!) { (error) in
+            FUser.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!, firstName: nameTextField.text! , lastName: surnameTextField.text!) { (error) in
                 
                 if error != nil {
                     ProgressHUD.dismiss()
@@ -59,6 +63,7 @@ class FinishRegistrationViewController: UIViewController {
                 
             }
             self.registerUser()
+            ProgressHUD.dismiss()
         }
         else {
             
@@ -125,7 +130,7 @@ class FinishRegistrationViewController: UIViewController {
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object:nil, userInfo: [kUSERID : FUser.currentId()])
         
-        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainChat") as! UITabBarController
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "welcome") as! UITabBarController
         
         self.present(mainView, animated: true, completion: nil)
         
@@ -141,7 +146,8 @@ class FinishRegistrationViewController: UIViewController {
          countryTextField.text = ""
          cityTextField.text = ""
          phoneTextField.text = ""
-         
+         emailTextField.text = ""
+         passwordTextField.text = ""
      }
     
 }

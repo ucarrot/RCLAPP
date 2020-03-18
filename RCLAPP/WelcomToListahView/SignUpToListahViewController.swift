@@ -36,8 +36,8 @@ class SignUpToListahViewController: UIViewController {
         if emailTextField.text != "" && passwordTextField.text != "" && firstNameTextField.text != "" && lastNameTextField.text != "" {
             
             KRProgressHUD.showMessage("Signing up ...")
-            
-            FUserOnListah.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!, firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, completion: { (error) in
+            //FUserOnListah
+            FUser.registerUserWith(email: emailTextField.text!, password: passwordTextField.text!, firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, completion: { (error) in
                 
                 if error != nil {
                 

@@ -25,7 +25,7 @@ class ShoppingList {
         totalItems = 0
         id = _id
         date = Date()
-        ownerId = FUserOnListah.currentId()
+        ownerId = FUser.currentId()//FUserOnListah
     }
     //we recieve a dictionary from firebase (section 3 , lecture 6)
     init(dictionary:NSDictionary) {
@@ -42,8 +42,8 @@ class ShoppingList {
     }
     //save items
     func saveItemInBackground(shoppingList: ShoppingList, completion: @escaping (_ error: Error?) -> Void) {
-        //auto id
-        let ref = firebase.child(kSHOPPINGLIST).child(FUserOnListah.currentId()).childByAutoId()
+        //auto id, FUserOnListah
+        let ref = firebase.child(kSHOPPINGLIST).child(FUser.currentId()).childByAutoId()
         
         shoppingList.id = ref.key!
         
@@ -53,16 +53,16 @@ class ShoppingList {
     }
     func updateItemInBackground(shoppingList: ShoppingList, completion: @escaping (_ error: Error?) -> Void)  {
     
-        let ref = firebase.child(kSHOPPINGLIST).child(FUserOnListah.currentId()).child(shoppingList.id)
+        let ref = firebase.child(kSHOPPINGLIST).child(FUser.currentId()).child(shoppingList.id)
         ref.setValue(dictionaryFromItem(item: shoppingList)) { (error, ref) in
             completion(error)
             
             
         }
     }
-    //delete items
+    //delete items, FUserOnListah
     func deleteItemInBackground(shoppingList: ShoppingList) {
-        let ref = firebase.child(kSHOPPINGLIST).child(FUserOnListah.currentId()).child(shoppingList.id)
+        let ref = firebase.child(kSHOPPINGLIST).child(FUser.currentId()).child(shoppingList.id)
         ref.removeValue()
     }
     

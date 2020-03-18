@@ -30,6 +30,8 @@
 		15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5810D21287AA00039AA36 /* ShoppingItem.swift */; };
 		865938F32136FCC3009DF2F4 /* SearchItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */; };
 		865938F52136FDBB009DF2F4 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */; };
+		867818B4241B55B400E6B58A /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867818B3241B55B400E6B58A /* OCRViewController.swift */; };
+		867818B6241B7B3700E6B58A /* AutoItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867818B5241B7B3700E6B58A /* AutoItemListViewController.swift */; };
 		8685DBA223D9A39600CACF90 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBA123D9A39600CACF90 /* SettingsTableViewController.swift */; };
 		8685DBA423D9DD2800CACF90 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBA323D9DD2800CACF90 /* UserTableViewCell.swift */; };
 		8685DBA723D9E82D00CACF90 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685DBA623D9E82D00CACF90 /* UsersTableViewController.swift */; };
@@ -78,6 +80,8 @@
 		68F97D7A6C9DB7256F849B77 /* Pods-RCLAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.release.xcconfig"; sourceTree = "<group>"; };
 		865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewController.swift; sourceTree = "<group>"; };
 		865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
+		867818B3241B55B400E6B58A /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
+		867818B5241B7B3700E6B58A /* AutoItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoItemListViewController.swift; sourceTree = "<group>"; };
 		8685DBA123D9A39600CACF90 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		8685DBA323D9DD2800CACF90 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		8685DBA623D9E82D00CACF90 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
@@ -284,6 +288,8 @@
 		8689A11024095C8500A23542 /* CaptureOCRView */ = {
 			isa = PBXGroup;
 			children = (
+				867818B3241B55B400E6B58A /* OCRViewController.swift */,
+				867818B5241B7B3700E6B58A /* AutoItemListViewController.swift */,
 			);
 			path = CaptureOCRView;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 				15C580E2212479940039AA36 /* Frameworks */,
 				15C580E3212479940039AA36 /* Resources */,
 				5E4CCAA66D6EA6B744AAFECF /* [CP] Embed Pods Frameworks */,
+				0B5F256D208B4CE53072E598 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,6 +376,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B5F256D208B4CE53072E598 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3870FE8E81607D4B9950962F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,11 +459,13 @@
 				8685DBA223D9A39600CACF90 /* SettingsTableViewController.swift in Sources */,
 				8685DBA923D9F3A700CACF90 /* ChatsViewController.swift in Sources */,
 				8689EB18238B123E00A3F7E1 /* HelperFunctions.swift in Sources */,
+				867818B6241B7B3700E6B58A /* AutoItemListViewController.swift in Sources */,
 				868FDB30241540CB0000CEF1 /* SettingsShoppingListViewController.swift in Sources */,
 				1525D48A212EF47F00427042 /* Camera.swift in Sources */,
 				868FDB3224163B990000CEF1 /* LoginToListahViewController.swift in Sources */,
 				868FDB3724163FE60000CEF1 /* FUserOnListah.swift in Sources */,
 				15C58103212712BA0039AA36 /* ShoppingList.swift in Sources */,
+				867818B4241B55B400E6B58A /* OCRViewController.swift in Sources */,
 				15C580FF2125F9C00039AA36 /* AllListsViewController.swift in Sources */,
 				868D7D6023564C9B005CAD93 /* GroceryItem.swift in Sources */,
 				15C580E9212479940039AA36 /* AppDelegate.swift in Sources */,
