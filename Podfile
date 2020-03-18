@@ -10,6 +10,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'Firebase/Firestore'
+pod 'Firebase/MLVision'
+pod 'Firebase/MLVisionTextModel' #on-device API
 
 pod 'ProgressHUD' #show notification
 pod 'MBProgressHUD' #loading
