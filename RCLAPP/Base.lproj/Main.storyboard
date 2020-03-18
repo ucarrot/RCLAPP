@@ -295,22 +295,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0C-o3-7vf">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0C-o3-7vf">
                                         <rect key="frame" x="18" y="108" width="338" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pyo-nb-4Xi">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pyo-nb-4Xi">
                                         <rect key="frame" x="18" y="150" width="338" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOs-IG-vxs">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOs-IG-vxs">
                                         <rect key="frame" x="18" y="192" width="338" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUa-Ia-HYj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUa-Ia-HYj">
                                         <rect key="frame" x="18" y="244" width="338" height="48"/>
                                         <color key="backgroundColor" red="0.83751755949999995" green="0.78426817140000005" blue="0.66031081930000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -327,20 +327,21 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="W0C-o3-7vf" firstAttribute="top" secondItem="2ai-Y0-XGS" secondAttribute="bottom" constant="8" id="7WE-YK-TVH"/>
-                                    <constraint firstItem="pyo-nb-4Xi" firstAttribute="top" secondItem="W0C-o3-7vf" secondAttribute="bottom" constant="8" id="9eC-GO-tct"/>
+                                    <constraint firstItem="W0C-o3-7vf" firstAttribute="leading" secondItem="2ai-Y0-XGS" secondAttribute="leading" id="ARZ-14-Fqd"/>
                                     <constraint firstItem="eUa-Ia-HYj" firstAttribute="leading" secondItem="eOs-IG-vxs" secondAttribute="leading" id="ICx-ND-YkM"/>
                                     <constraint firstItem="eUa-Ia-HYj" firstAttribute="trailing" secondItem="eOs-IG-vxs" secondAttribute="trailing" id="LSu-4z-xbF"/>
                                     <constraint firstItem="pyo-nb-4Xi" firstAttribute="trailing" secondItem="eOs-IG-vxs" secondAttribute="trailing" id="NHD-8K-5md"/>
                                     <constraint firstItem="2ai-Y0-XGS" firstAttribute="leading" secondItem="R7D-iC-Oft" secondAttribute="leading" constant="18" id="TBa-YQ-66c"/>
                                     <constraint firstItem="eUa-Ia-HYj" firstAttribute="top" secondItem="eOs-IG-vxs" secondAttribute="bottom" constant="18" id="VBS-Af-rxt"/>
-                                    <constraint firstItem="W0C-o3-7vf" firstAttribute="trailing" secondItem="pyo-nb-4Xi" secondAttribute="trailing" id="a78-NU-0s5"/>
+                                    <constraint firstItem="pyo-nb-4Xi" firstAttribute="top" secondItem="W0C-o3-7vf" secondAttribute="bottom" constant="8" id="Xc9-Vd-5CJ"/>
                                     <constraint firstItem="2ai-Y0-XGS" firstAttribute="centerX" secondItem="R7D-iC-Oft" secondAttribute="centerX" id="aB0-bW-19e"/>
                                     <constraint firstItem="pyo-nb-4Xi" firstAttribute="leading" secondItem="eOs-IG-vxs" secondAttribute="leading" id="dGU-0S-ahu"/>
-                                    <constraint firstItem="W0C-o3-7vf" firstAttribute="leading" secondItem="pyo-nb-4Xi" secondAttribute="leading" id="dl5-rY-kuA"/>
                                     <constraint firstItem="2ai-Y0-XGS" firstAttribute="top" secondItem="R7D-iC-Oft" secondAttribute="top" constant="66" id="gyO-ct-QqX"/>
-                                    <constraint firstItem="2ai-Y0-XGS" firstAttribute="leading" secondItem="W0C-o3-7vf" secondAttribute="leading" id="lbY-F3-Lad"/>
+                                    <constraint firstItem="W0C-o3-7vf" firstAttribute="trailing" secondItem="pyo-nb-4Xi" secondAttribute="trailing" id="oVg-GR-Y2r"/>
+                                    <constraint firstItem="W0C-o3-7vf" firstAttribute="top" secondItem="2ai-Y0-XGS" secondAttribute="bottom" constant="8" id="qkV-69-Zpc"/>
+                                    <constraint firstItem="W0C-o3-7vf" firstAttribute="trailing" secondItem="2ai-Y0-XGS" secondAttribute="trailing" id="rWb-9H-Hjo"/>
                                     <constraint firstItem="eOs-IG-vxs" firstAttribute="top" secondItem="pyo-nb-4Xi" secondAttribute="bottom" constant="8" id="rt7-h6-WrR"/>
+                                    <constraint firstItem="W0C-o3-7vf" firstAttribute="leading" secondItem="pyo-nb-4Xi" secondAttribute="leading" id="zSz-dP-IBU"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shoppinglisticon" translatesAutoresizingMaskIntoConstraints="NO" id="jha-5Y-14Q">
@@ -697,100 +698,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ea7-pQ-zu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1900.0000000000002" y="-307.33695652173918"/>
-        </scene>
-        <!--Chat-->
-        <scene sceneID="bsR-8D-NtK">
-            <objects>
-                <viewController title="Chat" id="MsG-lw-50i" customClass="WelcomeViewController" customModule="Listah" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="toN-P5-zmZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niE-UW-afZ">
-                                <rect key="frame" x="0.0" y="89" width="414" height="260"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-Lk-7P7">
-                                        <rect key="frame" x="20" y="98" width="374" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
-                                        <connections>
-                                            <action selector="emailTextField:" destination="MsG-lw-50i" eventType="editingDidEnd" id="86a-jh-INW"/>
-                                        </connections>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWd-Se-6FU">
-                                        <rect key="frame" x="20" y="140" width="374" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFe-Vj-BSP">
-                                        <rect key="frame" x="20" y="182" width="374" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shoppinglisticon" translatesAutoresizingMaskIntoConstraints="NO" id="1vB-fy-VQU">
-                                        <rect key="frame" x="158" y="6" width="99" height="84"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Listah Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="90" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-qu-kBt">
-                                <rect key="frame" x="26" y="39" width="363" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="24"/>
-                                <color key="textColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeU-XZ-2sc">
-                                <rect key="frame" x="20" y="438" width="127" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="MsG-lw-50i" eventType="touchUpInside" id="foG-L1-wRX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ik3-jE-FQn">
-                                <rect key="frame" x="267" y="438" width="127" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="registerButtonPressed:" destination="MsG-lw-50i" eventType="touchUpInside" id="rCX-PJ-j2G"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <gestureRecognizers/>
-                        <viewLayoutGuide key="safeArea" id="KP1-yR-SNi"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="KCd-KG-jnd" appends="YES" id="lKi-vT-wPR"/>
-                        </connections>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Chat" image="person.2" catalog="system" id="H14-PH-GZd"/>
-                    <connections>
-                        <outlet property="emailTextField" destination="lBe-Lk-7P7" id="7WJ-2P-85N"/>
-                        <outlet property="passwordTextField" destination="UWd-Se-6FU" id="Xsc-P2-IMe"/>
-                        <outlet property="repeatPasswordTextField" destination="AFe-Vj-BSP" id="P85-zp-ePf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fBN-wO-mto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="KCd-KG-jnd">
-                    <connections>
-                        <action selector="backgroundTab:" destination="MsG-lw-50i" id="Trs-t3-OL1"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-2424.6376811594205" y="457.33695652173918"/>
         </scene>
         <!--Finish Registration View Controller-->
         <scene sceneID="WyR-kR-Ow1">
@@ -1559,8 +1466,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.bullet" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W8x-Yu-ovc">
-                                <rect key="frame" x="20" y="23" width="374" height="444"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.down.on.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W8x-Yu-ovc">
+                                <rect key="frame" x="20" y="18.666666666666657" width="374" height="453.66666666666669"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2073,10 +1980,9 @@
         <image name="chat" width="25" height="25"/>
         <image name="diet" width="512" height="512"/>
         <image name="dollarsign.circle" catalog="system" width="64" height="60"/>
-        <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="message" width="30" height="30"/>
-        <image name="person.2" catalog="system" width="64" height="40"/>
         <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
         <image name="shoppinglisticon" width="512" height="512"/>
+        <image name="square.and.arrow.down.on.square.fill" catalog="system" width="60" height="64"/>
     </resources>
 </document>

@@ -28,6 +28,7 @@
 		15C58107212718820039AA36 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C58106212718820039AA36 /* Utilities.swift */; };
 		15C5810B21286C210039AA36 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5810A21286C210039AA36 /* ListTableViewCell.swift */; };
 		15C5810E21287AA00039AA36 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C5810D21287AA00039AA36 /* ShoppingItem.swift */; };
+		6BDC76AFA92F2D8C5EAF83A2 /* Pods_RCLAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8453459563EFCA91C01DADF0 /* Pods_RCLAPP.framework */; };
 		865938F32136FCC3009DF2F4 /* SearchItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */; };
 		865938F52136FDBB009DF2F4 /* GroceryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */; };
 		867818B4241B55B400E6B58A /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867818B3241B55B400E6B58A /* OCRViewController.swift */; };
@@ -49,7 +50,6 @@
 		868FDB3424163BB80000CEF1 /* SignUpToListahViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868FDB3324163BB80000CEF1 /* SignUpToListahViewController.swift */; };
 		868FDB3724163FE60000CEF1 /* FUserOnListah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868FDB3624163FE60000CEF1 /* FUserOnListah.swift */; };
 		86A9FC8C238AD84100481F5A /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */; };
-		DF685E0BF69066DB1DFB045B /* Pods_RCLAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,8 +76,8 @@
 		15C58106212718820039AA36 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		15C5810A21286C210039AA36 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		15C5810D21287AA00039AA36 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
-		564423FF07EF58A3087044FA /* Pods-RCLAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.debug.xcconfig"; sourceTree = "<group>"; };
-		68F97D7A6C9DB7256F849B77 /* Pods-RCLAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCLAPP/Pods-RCLAPP.release.xcconfig"; sourceTree = "<group>"; };
+		561284D85FBE00CD2FC54CB2 /* Pods-RCLAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.release.xcconfig"; path = "Target Support Files/Pods-RCLAPP/Pods-RCLAPP.release.xcconfig"; sourceTree = "<group>"; };
+		8453459563EFCA91C01DADF0 /* Pods_RCLAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCLAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		865938F22136FCC3009DF2F4 /* SearchItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewController.swift; sourceTree = "<group>"; };
 		865938F42136FDBB009DF2F4 /* GroceryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewCell.swift; sourceTree = "<group>"; };
 		867818B3241B55B400E6B58A /* OCRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		868FDB3324163BB80000CEF1 /* SignUpToListahViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpToListahViewController.swift; sourceTree = "<group>"; };
 		868FDB3624163FE60000CEF1 /* FUserOnListah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUserOnListah.swift; sourceTree = "<group>"; };
 		86A9FC8B238AD84100481F5A /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
-		909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCLAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8168638C66B527F8178CE4 /* Pods-RCLAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCLAPP.debug.xcconfig"; path = "Target Support Files/Pods-RCLAPP/Pods-RCLAPP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF685E0BF69066DB1DFB045B /* Pods_RCLAPP.framework in Frameworks */,
+				6BDC76AFA92F2D8C5EAF83A2 /* Pods_RCLAPP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +143,8 @@
 			children = (
 				15C580E7212479940039AA36 /* RCLAPP */,
 				15C580E6212479940039AA36 /* Products */,
-				6383672FAA926CE378083C55 /* Pods */,
-				4303D66EF8F4EC03783D6FEA /* Frameworks */,
+				50C4F8551FCFE4A690081E03 /* Pods */,
+				87FC86105593B44B06312FC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,21 +211,14 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
-		4303D66EF8F4EC03783D6FEA /* Frameworks */ = {
+		50C4F8551FCFE4A690081E03 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				909C88FC6049581C8F1CF2B5 /* Pods_RCLAPP.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6383672FAA926CE378083C55 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				564423FF07EF58A3087044FA /* Pods-RCLAPP.debug.xcconfig */,
-				68F97D7A6C9DB7256F849B77 /* Pods-RCLAPP.release.xcconfig */,
+				ED8168638C66B527F8178CE4 /* Pods-RCLAPP.debug.xcconfig */,
+				561284D85FBE00CD2FC54CB2 /* Pods-RCLAPP.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		865938F12136FC7A009DF2F4 /* ShoppingView */ = {
@@ -303,6 +296,14 @@
 			path = WelcomToListahView;
 			sourceTree = "<group>";
 		};
+		87FC86105593B44B06312FC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8453459563EFCA91C01DADF0 /* Pods_RCLAPP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,12 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15C580F7212479960039AA36 /* Build configuration list for PBXNativeTarget "RCLAPP" */;
 			buildPhases = (
-				3870FE8E81607D4B9950962F /* [CP] Check Pods Manifest.lock */,
+				4A14B9CDBDF51D54A1F9AB25 /* [CP] Check Pods Manifest.lock */,
 				15C580E1212479940039AA36 /* Sources */,
 				15C580E2212479940039AA36 /* Frameworks */,
 				15C580E3212479940039AA36 /* Resources */,
-				5E4CCAA66D6EA6B744AAFECF /* [CP] Embed Pods Frameworks */,
-				0B5F256D208B4CE53072E598 /* [CP] Copy Pods Resources */,
+				B88FA29E5F0F6052C028FE81 /* [CP] Embed Pods Frameworks */,
+				D04D6BEE4302FC722597F327 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,33 +377,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B5F256D208B4CE53072E598 /* [CP] Copy Pods Resources */ = {
+		4A14B9CDBDF51D54A1F9AB25 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3870FE8E81607D4B9950962F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RCLAPP-checkManifestLockResult.txt",
 			);
@@ -411,7 +399,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5E4CCAA66D6EA6B744AAFECF /* [CP] Embed Pods Frameworks */ = {
+		B88FA29E5F0F6052C028FE81 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,6 +414,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D04D6BEE4302FC722597F327 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RCLAPP/Pods-RCLAPP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -613,7 +618,7 @@
 		};
 		15C580F8212479960039AA36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 564423FF07EF58A3087044FA /* Pods-RCLAPP.debug.xcconfig */;
+			baseConfigurationReference = ED8168638C66B527F8178CE4 /* Pods-RCLAPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -632,7 +637,7 @@
 		};
 		15C580F9212479960039AA36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68F97D7A6C9DB7256F849B77 /* Pods-RCLAPP.release.xcconfig */;
+			baseConfigurationReference = 561284D85FBE00CD2FC54CB2 /* Pods-RCLAPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

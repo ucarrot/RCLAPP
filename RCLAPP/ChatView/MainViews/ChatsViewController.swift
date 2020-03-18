@@ -245,7 +245,7 @@ class ChatsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 if snapshot.exists {
                     
-                    let userDictionary = snapshot.data()! as NSDictionary //might cause error? replace "as" with "as!"
+                    let userDictionary = snapshot.data() as! NSDictionary //might cause error? replace "as" with "as!"
                     
                     let tempUser = FUser(_dictionary: userDictionary)
                     

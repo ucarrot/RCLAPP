@@ -87,7 +87,7 @@ class ChatViewController: JSQMessagesViewController {
         perform(Selector(("jsq_updateCollectionViewInsets")))
     }
     //end of iphone x fix part 1/2
-
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         //text delete
@@ -115,7 +115,7 @@ class ChatViewController: JSQMessagesViewController {
         
         self.inputToolbar.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         //end of iphone x fix part 2/2
-
+        
         //custom send button
         //"mic" is the icon name in the asset
         self.inputToolbar.contentView.rightBarButtonItem.setImage(UIImage(named: "mic"), for: .normal)
@@ -560,7 +560,7 @@ class ChatViewController: JSQMessagesViewController {
         let profileVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "profileView") as! ProfileViewTableViewController
         
         profileVC.user = withUsers.first!
-            self.navigationController?.pushViewController(profileVC, animated: true)
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
     //MARK: CustomSendButton
